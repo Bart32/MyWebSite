@@ -164,82 +164,82 @@ margin-left: 6%;
   font-family: 'Playfair Display', serif;
 }
 /* Icons */
-/* JS */
-.pngjs{
-  width:51%;
-  margin-left:49%;
-  opacity:0.5;
-}
+    /* JS */
+    .pngjs{
+      width:51%;
+      margin-left:49%;
+      opacity:0.5;
+    }
 
-.pngjquery{
-  width:50%;
-  margin-left:50%;
-  opacity:1;
-  margin-top:10%;
-   /* display: none; */
-}
-.pngreact{
-  width:50%;
-  margin-left:50%;
-  opacity:1;
-  margin-top:5%;
-   /* display: none; */
-}
-/* HTML */
-.pnghtml{
-  width:50%;
-  margin-left:25%;
-  opacity:0.5;
-  margin-top:-15%;
-}
+    .pngjquery{
+      width:50%;
+      margin-left:50%;
+      opacity:1;
+      margin-top:10%;
+       /* display: none; */
+    }
+    .pngreact{
+      width:50%;
+      margin-left:50%;
+      opacity:1;
+      margin-top:5%;
+       /* display: none; */
+    }
+    /* HTML */
+    .pnghtml{
+      width:50%;
+      margin-left:25%;
+      opacity:0.5;
+      margin-top:-15%;
+    }
 
-.pngresponsive{
-  width:35%;
-  margin-top:-10%;
-  margin-left:30%;
-  opacity:1;
-   /* display: none; */
-}
-/* CSS */
-.pngcss{
-    width:50%;
-  opacity:0.5;
-}
+    .pngresponsive{
+      width:35%;
+      margin-top:-10%;
+      margin-left:30%;
+      opacity:1;
+       /* display: none; */
+    }
+    /* CSS */
+    .pngcss{
+        width:50%;
+      opacity:0.5;
+    }
 
-.pngbootstrap{
-  width:20%;
-  margin-top:5%;
-  margin-left:15%;
-  opacity:1;
-   /* display: none; */
-}
-.pngsass{
-  width:30%;
-  margin-top:10%;
-  margin-left:15%;
-  opacity:1;
-   /* display: none; */
-}
+    .pngbootstrap{
+      width:20%;
+      margin-top:5%;
+      margin-left:15%;
+      opacity:1;
+       /* display: none; */
+    }
+    .pngsass{
+      width:30%;
+      margin-top:10%;
+      margin-left:15%;
+      opacity:1;
+       /* display: none; */
+    }
 
-/* OTHERS */
-.pngjoomla{
-  width:51%;
-  margin-left:49%;
-  opacity:1;
-}
-.pnggit{
-  width:40%;
-  margin-left:30%;
-  opacity:1;
-  margin-top:-5%;
+    /* OTHERS */
+    .pngjoomla{
+      width:51%;
+      margin-left:24.5%;
+      opacity:1;
+    }
+    .pnggit{
+      width:40%;
+      margin-left:50%;
+      opacity:1;
+      margin-top:-5%;
 
-}
-.pngatom{
-  width:30%;
-  margin-left:10%;
-  opacity:1;
-  margin-top:-10%;
-}
+    }
+    .jpgmysql{
+      width:45%;
+      margin-left:10%;
+      opacity:1;
+      margin-top:-10%;
+    }
 /* Slider */
 
 .slajder {
@@ -272,7 +272,16 @@ margin-left: 6%;
   margin-bottom:20px;
   font-family: 'Playfair Display', serif;
 }
+.contactF{
+  margin-top:50px;
+}
+.wyslijWiad{
+  background-color: #777575;
+}
+.wyslijWiad:hover{
+  background-color: #bfe4c1;
 
+}
 /* Text under headers */
 .text{
   text-align:center;
