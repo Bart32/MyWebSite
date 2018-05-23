@@ -19,6 +19,20 @@ $("#backToTop").click(function () {
 });
 // End Back to top button
 
+// Element's visible when hovering icon'switch
+  $('#jsimg').hover(function(){
+    $('#jqueryimg').slideDown();
+        $(this).css('opacity', '1');
+  });
+  $('#htmlimg').hover(function(){
+    $('#responsiveimg').slideDown();
+    $(this).css('opacity', '1');
+  });
+  $('#cssimg').hover(function(){
+    $('#bootstrapimg').slideDown();
+    $(this).css('opacity', '1');
+  });
+
 // Scroll down on click at menu
 $("#aboutMenu").click(function (){
   $("html, body").animate({ scrollTop: $('#about').offset().top }, 1000);

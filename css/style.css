@@ -168,57 +168,69 @@ margin-left: 6%;
     .pngjs{
       width:51%;
       margin-left:49%;
-      opacity:0.5;
+      opacity:0.6;
+    }
+    .pngjs:hover{
+      opacity:1;
     }
 
     .pngjquery{
       width:50%;
-      margin-left:50%;
+      margin-left:45%;
       opacity:1;
       margin-top:10%;
-       /* display: none; */
+       display: none;
+       position: absolute;
     }
     .pngreact{
       width:50%;
       margin-left:50%;
       opacity:1;
       margin-top:5%;
-       /* display: none; */
+       display: none;
     }
     /* HTML */
     .pnghtml{
       width:50%;
       margin-left:25%;
-      opacity:0.5;
+      opacity:0.6;
       margin-top:-15%;
+    }
+    .pnghtml:hover{
+      opacity:1;
     }
 
     .pngresponsive{
       width:35%;
       margin-top:-10%;
-      margin-left:30%;
+      margin-left:25%;
       opacity:1;
-       /* display: none; */
+      display: none;
+      position: absolute;
     }
     /* CSS */
     .pngcss{
         width:50%;
-      opacity:0.5;
+      opacity:0.6;
+    }
+    .pngcss:hover{
+      opacity:1;
     }
 
     .pngbootstrap{
       width:20%;
       margin-top:5%;
-      margin-left:15%;
+      margin-left:14%;
       opacity:1;
-       /* display: none; */
+       display: none;
+       position: absolute;
     }
     .pngsass{
       width:30%;
       margin-top:10%;
       margin-left:15%;
       opacity:1;
-       /* display: none; */
+       display: none;
     }
 
     /* OTHERS */
@@ -252,7 +264,7 @@ margin-left: 6%;
 /* Projects */
 .projektyHeader{
   text-align:center;
-  margin-top:50px;
+  margin-top:120px;
   margin-bottom:50px;
   font-family: 'Playfair Display', serif;
 }
@@ -276,7 +288,7 @@ margin-left: 6%;
   margin-top:50px;
 }
 .wyslijWiad{
-  background-color: #777575;
+  background-color: #51716c;
 }
 .wyslijWiad:hover{
   background-color: #bfe4c1;
@@ -288,6 +300,7 @@ margin-left: 6%;
   font-size:20px;
 }
 /* Footer */
-.footer{
-  background-color: rgb(156, 156, 156);
+footer{
+  margin-top:75px;
+  background-color: #51716c;
 }
