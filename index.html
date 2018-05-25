@@ -5,24 +5,34 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bartosz Kosiec</title>
 
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
   <script type="text/javascript" src="js/jQuery.js" async></script>
-  <script type="text/javascript" src="js/skrypt.js" ></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" async></script>
+  <script type="text/javascript" src="js/skrypt.js" async></script>
   <script src="js/bootstrap.min.js" async></script>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="fontawesome/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Playfair+Display" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Bartosz Kosiec</title>
 </head>
+
 <body>
+  <!-- FIXED ELEMENTS -->
   <img src="images/arrow.png" class="arrow" id="backToTop">
+  <div id="LeftIcons">
+    <a href="https://github.com/Bart32" target="_blank"> <i class="fab fa-github fa-3x FontIcons" style="top:10%;"> </i> </a>
+    <a href="https://www.linkedin.com/in/bartosz-kosiec-748301155/" target="_blank"><i class="fab fa-linkedin-in fa-3x FontIcons" style="top:18%;"></i> </a>
+    <a href="mailto:adres bartosz.kosiec@gmail.com"><i class="fas fa-at fa-3x FontIcons" style="top:28%;"></i> </a>
+  </div>
+
   <header class="header">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-4 col-xs-6">
+        <div class="col-md-4">
           <nav class="navbar navbar-expand-lg navbar-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -65,32 +75,34 @@
       </div>
 
       <div class="col-md-4"> <img src="images/ikony/js.png" class="pngjs" id="jsimg"> </div>
-      <div class="col-md-4"> <img src="images/ikony/html.png" class="pnghtml"id="htmlimg"> </div>
-      <div class="col-md-4"> <img src="images/ikony/css.png" class="pngcss"id="cssimg"> </div>
+      <div class="col-md-4"> <img src="images/ikony/html.png" class="pnghtml" id="htmlimg"> </div>
+      <div class="col-md-4"> <img src="images/ikony/css.png" class="pngcss" id="cssimg"> </div>
 
       <div class="col-md-4">
         <img src="images/ikony/jquery.png" class="pngjquery" id="jqueryimg">
-         <!--  <img src="images/ikony/react.png" class="pngreact"> -->
+        <!--  <img src="images/ikony/react.png" class="pngreact"> -->
 
       </div>
       <div class="col-md-4"> <img src="images/ikony/responsive.png" class="pngresponsive" id="responsiveimg"> </div>
       <div class="col-md-4">
         <img src="images/ikony/bootstrap.png" class="pngbootstrap" id="bootstrapimg"> <br>
-         <!-- <img src="images/ikony/sass.png" class="pngsass"> -->
+        <!-- <img src="images/ikony/sass.png" class="pngsass"> -->
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12" style="margin-bottom:5%; margin-top:20%;"> <p class="text"><strong>Pracuje także z: </strong></p> </div>
-      <div class="col-md-4"> <img src="images/ikony/git.png" class="pnggit">  </div>
+      <div class="col-md-12" style="margin-bottom:5%; margin-top:13%;">
+        <p class="text"><strong>Pracuje także z: </strong></p>
+      </div>
+      <div class="col-md-4"> <img src="images/ikony/git.png" class="pnggit"> </div>
       <div class="col-md-4"> <img src="images/ikony/joomla.png" class="pngjoomla"> </div>
-      <div class="col-md-4"> <img src="images/ikony/mysql.jpg" class="jpgmysql">  </div>
+      <div class="col-md-4"> <img src="images/ikony/mysql.jpg" class="jpgmysql"> </div>
     </div>
 
     <div class="row">
       <div class="col-md-12">
         <h1 class="projektyHeader" id="projects"> Projekty </h1>
         <p class="text">Poniżej znajdziesz kilka moich realizacji. <br>
-        <p class="text"> ??? </p>
+          <p class="text"> ??? </p>
       </div>
       <div class="col-md-4">
         <a target="_blank" href="http://localhost/mg_install/index.php">
@@ -109,26 +121,26 @@
       <div class="col-md-10">
         <h1 id="contact" class="contact"> Kontakt </h1>
         <p class="text">Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?
-        <p class="text"> Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href="#">CV.</a> Do usłyszenia! </p>
+          <p class="text"> Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href="#">CV.</a> Do usłyszenia! </p>
       </div>
       <div class="col-md-1"></div>
-      </div>
+    </div>
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
 
         <form class="form-horizontal contactF" action="#" id="ContactForm">
-         <div class="form-group">
-          <input type="email" class="form-control cForm" id="email" placeholder="E-mail" name="femail" required>
-        </div>
-         <div class="form-group">
-          <input type="text" class="form-control cForm" id="messageTopic" placeholder="Temat" name="ftopic" required>
-        </div>
-         <div class="form-group">
-          <textarea class="form-control cForm" rows="7" id="messageText" placeholder="Tekst wiadomości" name="ftext" required></textarea>
-        </div>
-       <button type="submit" class="btn wyslijWiad" name = "fsend">Wyślij wiadomość </button>
-       </form>
+          <div class="form-group">
+            <input type="email" class="form-control cForm" id="email" placeholder="E-mail" name="femail" required>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control cForm" id="messageTopic" placeholder="Temat" name="ftopic" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control cForm" rows="7" id="messageText" placeholder="Tekst wiadomości" name="ftext" required></textarea>
+          </div>
+          <button type="submit" class="btn wyslijWiad" name="fsend">Wyślij wiadomość </button>
+        </form>
       </div>
 
       <div class="col-md-2"></div>
@@ -137,46 +149,45 @@
   </div>
 
 
-<footer>
-  <hr>
+  <footer>
+    <hr>
 
 
-<div class="row">
-  <div class="col-md-12">
-<ul class="list-unstyled list-inline text-center">
-<li class="list-inline-item">
-<a class="btn-floating btn-fb mx-1">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="list-unstyled list-inline text-center">
+          <li class="list-inline-item">
+            <a class="btn-floating btn-fb mx-1">
 <i class="fa fa-facebook"> </i>
 </a>
-</li>
-<li class="list-inline-item">
-<a class="btn-floating btn-tw mx-1">
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-tw mx-1">
 <i class="fa fa-twitter"> </i>
 </a>
-</li>
-<li class="list-inline-item">
-<a class="btn-floating btn-gplus mx-1">
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-gplus mx-1">
 <i class="fa fa-google-plus"> </i>
 </a>
-</li>
-<li class="list-inline-item">
-<a class="btn-floating btn-li mx-1">
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-li mx-1">
 <i class="fa fa-linkedin"> </i>
 </a>
-</li>
-<li class="list-inline-item">
-<a class="btn-floating btn-dribbble mx-1">
+          </li>
+          <li class="list-inline-item">
+            <a class="btn-floating btn-dribbble mx-1">
 <i class="fa fa-dribbble"> </i>
 </a>
-</li>
-</ul>
-</div>
-<div class="col-md-12">
-<p class="text" style="font-size:17px;">© 2018 Copyright:
- Bartosz Kosiec </p>
-</div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-12">
+        <p class="text" style="font-size:17px;">© 2018 Copyright: Bartosz Kosiec </p>
+      </div>
 
-</footer>
+  </footer>
 
 </body>
 
