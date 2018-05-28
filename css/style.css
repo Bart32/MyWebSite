@@ -1,5 +1,7 @@
 /* CSS Animate */
-
+.btn{
+  z-index:10;
+}
 .hidenClass{
   opacity: 0;
 }
@@ -194,9 +196,6 @@ margin-left: 6%;
     .pngjs{
       width:51%;
       margin-left:49%;
-      opacity:0.6;
-    }
-    .pngjs:hover{
       opacity:1;
     }
 
@@ -205,7 +204,6 @@ margin-left: 6%;
       margin-left:45%;
       opacity:1;
       margin-top:10%;
-       display: none;
        position: absolute;
     }
     .pngreact{
@@ -219,36 +217,30 @@ margin-left: 6%;
     .pnghtml{
       width:50%;
       margin-left:25%;
-      opacity:0.6;
+      opacity:1;
       margin-top:-15%;
     }
-    .pnghtml:hover{
-      opacity:1;
-    }
+
 
     .pngresponsive{
       width:35%;
-      margin-top:-10%;
+      margin-top:-7%;
       margin-left:25%;
       opacity:1;
-      display: none;
       position: absolute;
     }
     /* CSS */
     .pngcss{
         width:50%;
-      opacity:0.6;
-    }
-    .pngcss:hover{
       opacity:1;
     }
 
+
     .pngbootstrap{
       width:20%;
-      margin-top:5%;
+      margin-top:7%;
       margin-left:14%;
       opacity:1;
-       display: none;
        position: absolute;
     }
     .pngsass{
@@ -288,25 +280,63 @@ margin-left: 6%;
   padding-bottom:50px;
 }
 /* Projects */
-.projektyHeader{
+.projectsHeader{
   text-align:center;
   margin-top:120px;
-  margin-bottom:50px;
   font-family: 'Playfair Display', serif;
 }
+
+.projects{
+    margin-left:13%;
+}
 .projects:hover{
-  -o-transition: all 0.6s;
--moz-transition: all 0.6s;
--webkit-transition: all 0.6s;
--moz-transform: scale(1.1);
--o-transform: scale(1.1);
--webkit-transform: scale(1.1);
+}
+.projectName{
+  position: absolute;
+  left:7%;
+  top:15%;
+  background: rgba(0, 0, 0, 0.66);
+  color:white;
+  width:50%;
+  height:18%;
+}
+.projectText{
+  font-size: 24px;
+margin-left: 5%;
+font-family: 'Oswald', sans-serif;
+z-index:10;
 }
 
+.ProjectTechnologies{
+  position: absolute;
+  left:7%;
+  bottom:0%;
+  background: rgba(0, 0, 0, 0.66);
+  color:white;
+  width:88%;
+  height:30%;
+  margin-bottom: 1%;
+}
+.debonIcons{
+  padding:18px;
+  line-height: 1 !important;
+  font-size: 2.5em;
+}
+.templateIcons{
+  padding:13px;
+  line-height: 1.2 !important;
+  font-size: 1.7em;
+  margin-left: -10px;
+}
+.kosiecIcons{
+  padding:16px;
+  line-height: 1.8 !important;
+  font-size: 2.7em;
+}
 /* Contact */
 .contact{
   text-align:center;
-  margin-top:50px;
+   margin-top:120px;
   margin-bottom:20px;
   font-family: 'Playfair Display', serif;
 }
@@ -314,19 +344,35 @@ margin-left: 6%;
   margin-top:50px;
 }
 .wyslijWiad{
-  background-color: #51716c;
+  background-color: #2a2a2a;
+  color:white;
 }
 .wyslijWiad:hover{
-  background-color: #bfe4c1;
+  background-color: #cfcfcf;
+  color:black;
+}
 
+.wyslijWiad:hover{
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+}
+.wyslijWiad.focus, .wyslijWiad:focus{
+  box-shadow: 0 0 0 .2rem rgba(255, 255, 255, 0.25);
 }
 /* Text under headers */
 .text{
   text-align:center;
   font-size:20px;
+  font-family: 'Raleway', sans-serif;
 }
+
 /* Footer */
 footer{
   margin-top:75px;
   background-color: #51716c;
+}
+
+.footerIcons{
+  margin-left:10px;
+  color:black;
 }
