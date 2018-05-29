@@ -1,17 +1,6 @@
 a:hover{
 text-decoration:none;
 }
-/* CSS Animate */
-.btn{
-  z-index:10;
-}
-.hidenClass{
-  opacity: 0;
-}
-
-.show{
-  opacity:1;
-}
 
 /* All Fixed item's */
 
@@ -41,14 +30,17 @@ text-decoration:none;
   transform: scale(1.1);
 }
 
+.btn{
+  z-index:10;
+}
 
 /* menu  */
 
 .navbar-light .navbar-nav .nav-link {
   color: black;
-  font-size: 15px;
+  font-size: 20px;
   margin-right: 20px;
-  margin-top: 15px;
+  margin-top: 6%;
 }
 
 .nav-item {
@@ -120,9 +112,9 @@ text-decoration:none;
 .languageChoice {
   padding: 1rem;
   text-align: center;
-  margin-top: 15px;
+  margin-top: 6%;
   font-family: 'Playfair Display', serif;
-  font-size: 15px;
+  font-size: 20px;
 }
 @media (max-width: 992px){
   .languageChoice{
