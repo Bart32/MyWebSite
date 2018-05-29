@@ -1,3 +1,6 @@
+a:hover{
+text-decoration:none;
+}
 /* CSS Animate */
 .btn{
   z-index:10;
@@ -182,8 +185,10 @@ margin-left: 6%;
 }
 
 /* About me */
+.aboutShadows{
+}
 .about{
-  padding-bottom:130px;
+  padding-bottom:30px;
 }
 .aboutHeader{
   text-align:center;
@@ -201,10 +206,10 @@ margin-left: 6%;
 
     .pngjquery{
       width:50%;
-      margin-left:45%;
+      margin-left:50%;
       opacity:1;
       margin-top:10%;
-       position: absolute;
+
     }
     .pngreact{
       width:50%;
@@ -225,9 +230,9 @@ margin-left: 6%;
     .pngresponsive{
       width:35%;
       margin-top:-7%;
-      margin-left:25%;
+      margin-left:29%;
       opacity:1;
-      position: absolute;
+
     }
     /* CSS */
     .pngcss{
@@ -239,15 +244,12 @@ margin-left: 6%;
     .pngbootstrap{
       width:20%;
       margin-top:7%;
-      margin-left:14%;
-      opacity:1;
-       position: absolute;
+      margin-left:15%;
     }
     .pngsass{
       width:30%;
       margin-top:10%;
       margin-left:15%;
-      opacity:1;
        display: none;
     }
 
@@ -255,7 +257,6 @@ margin-left: 6%;
     .pngjoomla{
       width:51%;
       margin-left:24.5%;
-      opacity:1;
     }
     .pnggit{
       width:40%;
@@ -267,7 +268,6 @@ margin-left: 6%;
     .jpgmysql{
       width:45%;
       margin-left:10%;
-      opacity:1;
       margin-top:-10%;
     }
 /* Slider */
@@ -280,14 +280,20 @@ margin-left: 6%;
   padding-bottom:50px;
 }
 /* Projects */
+.shadow{
+  -webkit-box-shadow: 0px -9px 38px -36px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px -9px 38px -36px rgba(0,0,0,0.75);
+  box-shadow:0px -9px 38px -36px rgba(0,0,0,0.75);
+}
 .projectsHeader{
   text-align:center;
-  margin-top:120px;
   font-family: 'Playfair Display', serif;
 }
 
 .projects{
     margin-left:13%;
+    width: 75%;
+    height: auto;
 }
 .projects:hover{
 }
@@ -333,10 +339,17 @@ z-index:10;
   line-height: 1.8 !important;
   font-size: 2.7em;
 }
+.visitWebsiteButton{
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.visitWebsiteButton:hover{
+  text-decoration:none;
+}
 /* Contact */
 .contact{
   text-align:center;
-   margin-top:120px;
   margin-bottom:20px;
   font-family: 'Playfair Display', serif;
 }

@@ -7,8 +7,6 @@ window.onload = function(){
 $('.hiddenClass').hide();
 
 window.onscroll = function(){
-  var testy = document.getElementById('testy');
-  testy.innerHTML = window.pageYOffset;
   if(window.pageYOffset > 320){
     $('#jspng').slideDown();
     $('#htmlpng').slideDown();
@@ -106,22 +104,5 @@ $('.thirdProject').mouseover(function (){
 
 // Projects image change
 
-$(".firstProject").mouseover(function () {
-  $('#debon').attr("src","images/projects/debon2Small.png");
-}).mouseout(function () {
-  $('#debon').attr("src","images/projects/debonSmall.png");
-});
-
-$(".secondProject").mouseover(function () {
-  $('#template').attr("src","images/projects/template2Small.png");
-}).mouseout(function () {
-  $('#template').attr("src","images/projects/templateSmall.png");
-});
-
-$(".thirdProject").mouseover(function () {
-  $('#bartek').attr("src","images/projects/bartek2Small.png");
-}).mouseout(function () {
-  $('#bartek').attr("src","images/projects/bartekSmall.png");
-});
 
 }
