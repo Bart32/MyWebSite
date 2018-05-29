@@ -10,8 +10,16 @@
   <script type="text/javascript" src="js/skrypt.js" ></script>
   <script src="js/bootstrap.min.js" ></script>
 
+  <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
   <link href="css/animate.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="fontawesome/web-fonts-with-css/css/fontawesome-all.css" rel="stylesheet">
@@ -43,19 +51,27 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav menu">
-                <a class="nav-item nav-link" href="#" id="aboutMenu">O mnie</a>
-                <a class="nav-item nav-link" href="#" id="projectsMenu">Projekty</a>
-                <a class="nav-item nav-link" href="#" id="contactMenu">Kontakt</a>
+                <a class="nav-item nav-link menuItem" href="#" id="aboutMenu">O mnie</a>
+                <a class="nav-item nav-link menuItem" href="#" id="projectsMenu">Projekty</a>
+                <a class="nav-item nav-link menuItem" href="#" id="contactMenu">Kontakt</a>
               </div>
             </div>
           </nav>
         </div>
         <!-- LANGUAGE CHOICE -->
 
+
+        <a class="nav-item nav-link" href="#" id="aboutMenu">O mnie</a>
+        <a class="nav-item nav-link" href="#" id="projectsMenu">Projekty</a>
+        <a class="nav-item nav-link" href="#" id="contactMenu">Kontakt</a>
+
+
         <div class="col-md-5"></div>
-        <div class="col-md-3 col-xs-6">
-          <p class="languageChoice"> Wybór języka:<a href="index.html" class="plSite" id="pol"><img class="polFlag" src="images/pol.png" alt="Poland Flag"></a>
-            <a href="en.html" class="engSite"><img src="images/gb.png" class="gbFlag"></a> </p>
+        <div class="col-md-3">
+          <p class="languageChoice">
+            <span class="languageChoiceText">Wybór języka:</span>
+            <a href="index.html" class="plSite"><img class="polFlag" src="images/pol.png" alt="PolandFlag"></a>
+            <a href="en.html" class="engSite"><img class="gbFlag" src="images/gb.png" alt="GBFlag"></a>
         </div>
       </div>
       <!-- VIDEO -->
@@ -89,6 +105,8 @@
       <div class="col-md-4"  style="padding-top:130px;"> <img src="images/ikony/js.png" class="pngjs hiddenClass" id="jspng"> </div>
       <div class="col-md-4"  style="padding-top:130px;"> <img src="images/ikony/html.png" class="pnghtml hiddenClass" id="htmlpng"> </div>
       <div class="col-md-4"  style="padding-top:130px;"> <img src="images/ikony/css.png" class="pngcss hiddenClass" id="csspng"> </div>
+    </div>
+    <div class="row">
       <div class="col-md-4">
         <img src="images/ikony/jquery.png" class="pngjquery hiddenClass" id="jquerypng">
         <!--  <img src="images/ikony/react.png" class="pngreact"> -->
@@ -115,7 +133,7 @@
       <div class="col-md-12" style="  margin-top:4%;">
         <h1 class="projectsHeader" id="projects"> Projekty </h1>
         <p class="text">Poniżej znajdziesz kilka projektów, nad którymi pracowałem. </p>
-        <p class="text">Potrafie zarówno sam stworzyć szablon jak i zintegrować projekt z systemem zarządzania treścią.</p>
+        <p class="text">Potrafie zaró sam stworzyć szablon lub zintegrować gotowy projekt z systemem zarządzania treścią.</p>
         <p class="text">Do tej pory przy projektach pracowałem głównie z CMS Joomla, lecz jestem otwarty na nowe rozwiązania.</p>
         <p class="text"> Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt  jest juz w realizacji.
         </p>

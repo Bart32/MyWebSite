@@ -4,7 +4,7 @@ text-decoration:none;
 
 /* All Fixed item's */
 
-.FontIcons{
+.fontIcons{
   position: fixed;
   left:1%;
   z-index:10;
@@ -16,6 +16,11 @@ text-decoration:none;
   transform: scale(1.1);
 }
 
+@media screen and (max-width: 992px) {
+  .fontIcons {
+    display:none !important;
+  }
+}
 .arrow{
   width:3%;
   position:fixed;
@@ -30,33 +35,34 @@ text-decoration:none;
   transform: scale(1.1);
 }
 
+@media screen and (max-width: 992px) {
+  .arrow {
+    display:none !important;
+  }
+}
 .btn{
   z-index:10;
 }
 
 /* menu  */
-
-.navbar-light .navbar-nav .nav-link {
+.menuItem {
   color: black;
   font-size: 20px;
   margin-right: 20px;
   margin-top: 6%;
-}
-
-.nav-item {
   position: relative;
   font-family: 'Playfair Display', serif;
 }
 
 @media (max-width: 992px) {
-  .nav-item {
+  .menuItem {
     position: relative;
     margin-top: 0px;
     width: 25%;
   }
 }
 
-.nav-item:before {
+.menuItem:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -72,18 +78,18 @@ text-decoration:none;
 }
 
 @media (max-width: 992px) {
-  .nav-item::before {
+  .menuItem::before {
     width: 90%;
   }
 }
 
-.nav-item:hover:before {
+.menuItem:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
-.nav-item:hover {
+.menuItem:hover {
   color: #000 !important;
 }
 
@@ -109,18 +115,7 @@ text-decoration:none;
   }
 }
 
-.languageChoice {
-  padding: 1rem;
-  text-align: center;
-  margin-top: 6%;
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-}
-@media (max-width: 992px){
-  .languageChoice{
-    display: none;
-  }
-}
+
 
 .videoBg {
   position: absolute;
@@ -136,22 +131,28 @@ text-decoration:none;
   object-fit: fill;
 }
 
+.languageChoice {
+  padding: 1rem;
+  text-align: center;
+  margin-top: 6%;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+}
+@media (max-width: 992px){
+  .languageChoice{
+
+  }
+}
 .polFlag {
   width: 25px;
 }
 
 @media (max-width: 992px) {
   .polFlag {
-    width: 25px;
-  }
-}
-
-.plSite {
-margin-left: 5%;
-}
-
-@media (max-width: 992px) {
-  .plSite {
+    width: 10%;
+    position: absolute;
+    top:-50%;
+    right:5%;
 
   }
 }
@@ -162,20 +163,18 @@ margin-left: 5%;
 
 @media (max-width: 992px) {
   .gbFlag {
-
+    width: 10%;
+    position: absolute;
+    top:0%;
+    right:5%;
   }
-}
-
-.engSite {
-margin-left: 6%;
 }
 
 @media (max-width: 992px) {
-  .engSite {
-
+  .languageChoiceText {
+  display:none;
   }
 }
-
 /* About me */
 .aboutShadows{
 }
@@ -291,12 +290,12 @@ margin-left: 6%;
 }
 .projectName{
   position: absolute;
-  left:7%;
-  top:15%;
+  left:5%;
+  top:24%;
   background: rgba(0, 0, 0, 0.66);
   color:white;
   width:50%;
-  height:18%;
+  height:11%;
 }
 .projectText{
   font-size: 24px;
@@ -312,23 +311,22 @@ z-index:10;
   background: rgba(0, 0, 0, 0.66);
   color:white;
   width:88%;
-  height:30%;
-  margin-bottom: 1%;
+  height:15%;
+  margin-bottom: 5%;
 }
 .debonIcons{
   padding:18px;
-  line-height: 1 !important;
+  line-height: 0.5 !important;
   font-size: 2.5em;
 }
 .templateIcons{
-  padding:13px;
-  line-height: 1.2 !important;
   font-size: 1.7em;
-  margin-left: -10px;
+  margin-right: 35px;
+  margin-top: 6px;
 }
 .kosiecIcons{
   padding:16px;
-  line-height: 1.8 !important;
+  line-height: 1.2 !important;
   font-size: 2.7em;
 }
 .visitWebsiteButton{

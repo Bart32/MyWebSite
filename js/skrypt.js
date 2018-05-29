@@ -58,10 +58,6 @@ $('#contactMenu').click(function (){
   $('html, body').animate({scrollTop: '+=2238px'}, 1200);
 });
 
-// Projects
-
-
-
 // Project name and Project technologies
 $('.ProjectTechnologies').hide();
 $('.projectName').hide();
