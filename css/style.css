@@ -1,3 +1,6 @@
+a:hover{
+text-decoration:none;
+}
 /* CSS Animate */
 .btn{
   z-index:10;
@@ -288,6 +291,8 @@ margin-left: 6%;
 
 .projects{
     margin-left:13%;
+    width: 75%;
+    height: auto;
 }
 .projects:hover{
 }
@@ -332,6 +337,14 @@ z-index:10;
   padding:16px;
   line-height: 1.8 !important;
   font-size: 2.7em;
+}
+.visitWebsiteButton{
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+.visitWebsiteButton:hover{
+  text-decoration:none;
 }
 /* Contact */
 .contact{

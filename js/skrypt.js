@@ -7,8 +7,6 @@ window.onload = function(){
 $('.hiddenClass').hide();
 
 window.onscroll = function(){
-  var testy = document.getElementById('testy');
-  testy.innerHTML = window.pageYOffset;
   if(window.pageYOffset > 320){
     $('#jspng').slideDown();
     $('#htmlpng').slideDown();
