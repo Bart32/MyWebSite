@@ -7,12 +7,20 @@ window.onload = function(){
 $('.hiddenClass').hide();
 
 window.onscroll = function(){
+  if(window.pageYOffset < 50){
+    $('.flags').show();
+  }
+  else{
+  $('.flags').hide();
+  }
+
   if(window.pageYOffset > 320){
     $('#jspng').slideDown();
     $('#htmlpng').slideDown();
     $('#csspng').slideDown();
 
   }
+
   if(window.pageYOffset > 350){
     $('#backToTop').show();
     $('#LeftIcons').show();
@@ -22,7 +30,7 @@ window.onscroll = function(){
     $('#LeftIcons').hide();
   }
 
-  if(window.pageYOffset > 575){
+  if(window.pageYOffset > 525){
   $('#responsivepng').slideDown();
   $('#bootstrappng').slideDown();
   $('#jquerypng').slideDown();
@@ -34,7 +42,7 @@ window.onscroll = function(){
   $('#mysqlpng').slideDown();
   }
 
-  if(window.pageYOffset > 1254){
+  if(window.pageYOffset > 1450){
   $('#debon').slideDown();
   $('#template').slideDown();
   $('#bartek').slideDown();
@@ -52,10 +60,10 @@ $('#aboutMenu').click(function (){
   $('html, body').animate({ scrollTop: $('#about').offset().top }, 1200);
 });
 $('#projectsMenu').click(function (){
-  $('html, body').animate({scrollTop: '+=1596px'}, 1200);
+  $('html, body').animate({scrollTop: '+=1400px'}, 1200);
 });
 $('#contactMenu').click(function (){
-  $('html, body').animate({scrollTop: '+=2238px'}, 1200);
+  $('html, body').animate({scrollTop: '+=2460px'}, 1200);
 });
 
 // Project name and Project technologies
@@ -97,8 +105,6 @@ $('.thirdProject').mouseover(function (){
       $('#kosiecTechnologies').hide( "fast", function() {
     });
   });
-
-// Projects image change
 
 
 }
