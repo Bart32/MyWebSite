@@ -7,15 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <script type="text/javascript" src="js/jQuery.js"></script>
-  <script type="text/javascript" src="js/skrypt.js" ></script>
-  <script src="js/bootstrap.min.js" ></script>
+  <script type="text/javascript" src="js/skrypt.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 
   <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -32,6 +32,7 @@
 
 <body>
   <!-- FIXED ELEMENTS -->
+  <div id="testy" style="position:fixed; top:0; left:0;"> :) </div>
   <img src="images/arrow.png" class="arrow hiddenClass" id="backToTop">
   <div id="LeftIcons" class="hiddenClass">
     <a href="https://github.com/Bart32" target="_blank"> <i class="fab fa-github fa-3x fontIcons" style="top:2%;"> </i> </a>
@@ -76,7 +77,8 @@
           <p class="myName">Bartosz Kosiec</p>
         </div>
       </div>
-      <video class="videoBg" autoplay="autoplay">
+
+      <video class="videoBg" autoplay="autoplay" poster="images/keyboard.png">
       <source src="video/keyboard2.mp4" type="video/webm" / style="width:100%; height:100%;">
       <source src="video/keyboard2.mp4" type="video/mp4" />
   </video>
@@ -95,7 +97,7 @@
         <p class="text">Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich pracuje to: </p>
       </div>
     </div>
-      <!-- JS/HTML/CSS -->
+    <!-- JS/HTML/CSS -->
     <div class="row ">
       <div class="col-md-4">
         <div class="col-md-12"><img src="images/ikony/html.png" class="pnghtml hiddenClass" id="htmlpng"> </div>
@@ -111,9 +113,9 @@
         <div class="col-md-12">
           <img src="images/ikony/bootstrap.png" class="pngbootstrap hiddenClass" id="bootstrappng"> <br>
           <!-- <img src="images/ikony/sass.png" class="pngsass"> -->
+        </div>
       </div>
     </div>
-  </div>
     <!-- OTHER TECHNOLOGIES -->
     <div class="row" style="padding-bottom:6%">
       <div class="col-md-12" style="padding-bottom:8%; padding-top:8%;">
@@ -121,9 +123,9 @@
       </div>
       <div class="col-md-4"> <img src="images/ikony/git.png" class="pnggit hiddenClass" id="gitpng"> </div>
       <div class="col-md-4"> <img src="images/ikony/joomla.png" class="pngjoomla hiddenClass" id="joomlapng"> </div>
-      <div class="col-md-4"> <img src="images/ikony/mysql.jpg" class="jpgmysql hiddenClass" id="mysqlpng"> </div>
+      <div class="col-md-4"> <img src="images/ikony/mysql.jpg" class="pngmysql hiddenClass" id="mysqlpng"> </div>
     </div>
-  <!-- PROJECTS -->
+    <!-- PROJECTS -->
 
     <div class="row shadows">
       <div class="col-md-12" style="  margin-top:4%;">
@@ -131,55 +133,64 @@
         <p class="text">Poniżej znajdziesz kilka projektów, nad którymi pracowałem. </p>
         <p class="text">Potrafie zaró sam stworzyć szablon lub zintegrować gotowy projekt z systemem zarządzania treścią.</p>
         <p class="text">Do tej pory przy projektach pracowałem głównie z CMS Joomla, lecz jestem otwarty na nowe rozwiązania.</p>
-        <p class="text"> Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt  jest juz w realizacji.
+        <p class="text"> Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt jest juz w realizacji.
         </p>
       </div>
 
       <div class="col-md-4" style="padding-bottom: 50px; padding-top: 7%;">
-            <div class = "projectName" id="debonName"> <p class="projectText"> DEBON </p> </div>
-          <img src="images/projects/debonSmall.png"  alt="" class="projects hiddenClass" id="debon">
-            <div class = "ProjectTechnologies" id="debonTechnologies">
-              <i class="fab fa-joomla  debonIcons"></i>
-              <i class="devicon-html5-plain-wordmark debonIcons"></i>
-              <i class="devicon-css3-plain-wordmark  debonIcons"></i>
-              <i class="devicon-javascript-plain   debonIcons"></i>
-              <i class="devicon-jquery-plain-wordmark  debonIcons"></i>
-            </div>
+        <div class="col-md-12">
+          <div class="projectName" id="debonName">
+            <p class="projectText"> DEBON </p>
+          </div>
+          <img src="images/projects/debonSmall.png" alt="" class="projects hiddenClass" id="debon">
+          <div class="ProjectTechnologies" id="debonTechnologies">
+            <i class="fab fa-joomla  debonIcons"></i>
+            <i class="devicon-html5-plain-wordmark debonIcons"></i>
+            <i class="devicon-css3-plain-wordmark  debonIcons"></i>
+            <i class="devicon-javascript-plain   debonIcons"></i>
+            <i class="devicon-jquery-plain-wordmark  debonIcons"></i>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <a target="_blank" href="http://debon.com.pl/" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad firstProject">Odwiedź witrynę </button> </a>
+        </div>
       </div>
-
       <div class="col-md-4" style="padding-top: 7%;">
-            <div class = "projectName" id="templateName"> <p class="projectText"> W REALIZACJI </p> </div>
-          <img src="images/projects/templateSmall.png" alt="" class="projects hiddenClass" id="template"/>
-            <div class = "ProjectTechnologies" id="templateTechnologies"> <p class="projectText">
+        <div class="col-md-12">
+          <div class="projectName" id="templateName">
+            <p class="projectText"> W REALIZACJI </p>
+          </div>
+          <img src="images/projects/templateSmall.png" alt="" class="projects hiddenClass" id="template" />
+          <div class="ProjectTechnologies" id="templateTechnologies">
+
               <i class="fab fa-joomla  templateIcons"></i>
               <i class="devicon-html5-plain-wordmark templateIcons"></i>
               <i class="devicon-css3-plain-wordmark  templateIcons"></i>
-            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <a target="_blank" href="http://serwer1654807.home.pl/Bartek/budowlana/" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad secondProject">Odwiedź witrynę </button> </a>
+        </div>
       </div>
       <div class="col-md-4" style="padding-bottom: 50px; padding-top: 7%;">
-            <div class = "projectName" id="kosiecName"> <p class="projectText"> KOSIEC </p> </div>
-          <img src="images/projects/bartekSmall.png"  alt="" class="projects hiddenClass" id="bartek">
-            <div class = "ProjectTechnologies" id="kosiecTechnologies">
-              <i class="devicon-html5-plain-wordmark kosiecIcons"></i>
-              <i class="devicon-css3-plain-wordmark  kosiecIcons"></i>
-              <i class="devicon-javascript-plain   kosiecIcons"></i>
-              <i class="devicon-jquery-plain-wordmark  kosiecIcons"></i>
-              <i class="devicon-github-plain-wordmark  kosiecIcons"></i>
-             </div>
+        <div class="col-md-12">
+          <div class="projectName" id="kosiecName">
+            <p class="projectText"> KOSIEC </p>
+          </div>
+          <img src="images/projects/bartekSmall.png" alt="" class="projects hiddenClass" id="bartek">
+          <div class="ProjectTechnologies" id="kosiecTechnologies">
+            <i class="devicon-html5-plain-wordmark kosiecIcons"></i>
+            <i class="devicon-css3-plain-wordmark  kosiecIcons"></i>
+            <i class="devicon-javascript-plain   kosiecIcons"></i>
+            <i class="devicon-jquery-plain-wordmark  kosiecIcons"></i>
+            <i class="devicon-github-plain-wordmark  kosiecIcons"></i>
+          </div>
+        </div>
+        <div class="col-md-12">
+            <a target="_blank" href="#" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad thirdProject">Odwiedź witrynę </button> </a>
+        </div>
       </div>
     </div>
-
-    <div class="row" style="padding-bottom:6%;">
-      <div class="col-md-4 " >
-        <a target="_blank" href="http://debon.com.pl/" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad firstProject"  name="fsend">Odwiedź witrynę </button> </a>
-      </div>
-      <div class="col-md-4 " >
-          <a target="_blank" href="http://serwer1654807.home.pl/Bartek/budowlana/" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad secondProject"  name="fsend">Odwiedź witrynę </button> </a>
-      </div>
-      <div class="col-md-4 ">
-          <a target="_blank" href="#" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad thirdProject" name="fsend">Odwiedź witrynę </button> </a>
-      </div>
-  </div>
     <!-- CONTACT -->
     <div class="row shadows" style="padding-top:4%;">
       <div class="col-md-1"></div>
@@ -209,24 +220,25 @@
       <div class="col-md-2"></div>
     </div>
   </div>
- <!-- FOOTER -->
+  <!-- FOOTER -->
 
   <footer>
     <hr>
-      <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <ul class="list-unstyled list-inline text-center">
-          <a href="https://github.com/Bart32" target="_blank"> <i class="fab fa-github fa-2x  footerIcons"> </i> </a>
-          <a href="https://www.linkedin.com/in/bartosz-kosiec-748301155/" target="_blank"><i class="fab fa-linkedin-in fa-2x  footerIcons"></i> </a>
-          <a href="mailto:adres bartosz.kosiec@gmail.com"><i class="fas fa-at fa-2x footerIcons"></i> </a>
-        </ul>
-      </div>
-      <div class="col-md-12">
-        <p class="text" style="font-size:17px;">© 2018 Copyright: Bartosz Kosiec </p>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-unstyled list-inline text-center">
+            <a href="https://github.com/Bart32" target="_blank"> <i class="fab fa-github fa-2x  footerIcons"> </i> </a>
+            <a href="https://www.linkedin.com/in/bartosz-kosiec-748301155/" target="_blank"><i class="fab fa-linkedin-in fa-2x  footerIcons"></i> </a>
+            <a href="mailto:adres bartosz.kosiec@gmail.com"><i class="fas fa-at fa-2x footerIcons"></i> </a>
+          </ul>
+        </div>
+        <div class="col-md-12">
+          <p class="text" style="font-size:17px;">© 2018 Copyright: Bartosz Kosiec </p>
+        </div>
       </div>
     </div>
-  </div>
   </footer>
 </body>
+
 </html>

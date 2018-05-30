@@ -1,12 +1,18 @@
 
 window.onload = function(){
-
-
 // Showing button, left icons and html, css, js images
-
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  $('.hiddenClass');
+}
+else{
 $('.hiddenClass').hide();
+}
+
 
 window.onscroll = function(){
+  var test = document.getElementById('testy')
+test.innerHTML = window.pageYOffset;
+
   if(window.pageYOffset < 50){
     $('.flags').show();
   }
@@ -55,20 +61,37 @@ $('#backToTop').click(function () {
 });
 
 // Menu
-
-$('#aboutMenu').click(function (){
-  $('html, body').animate({ scrollTop: $('#about').offset().top }, 1200);
-});
-$('#projectsMenu').click(function (){
-  $('html, body').animate({scrollTop: '+=1400px'}, 1200);
-});
-$('#contactMenu').click(function (){
-  $('html, body').animate({scrollTop: '+=2460px'}, 1200);
-});
-
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  $('#aboutMenu').click(function (){
+    $('html, body').animate({ scrollTop: $('#about').offset().top }, 1200);
+  });
+  $('#projectsMenu').click(function (){
+    $('html, body').animate({ scrollTop: $('#projects').offset().top }, 1200);
+  });
+  $('#contactMenu').click(function (){
+    $('html, body').animate({ scrollTop: $('#contact').offset().top }, 1200);
+  });
+}
+else{
+  $('#aboutMenu').click(function (){
+    $('html, body').animate({ scrollTop: $('#about').offset().top }, 1200);
+  });
+  $('#projectsMenu').click(function (){
+    $('html, body').animate({scrollTop: '+=1704px'}, 1200);
+  });
+  $('#contactMenu').click(function (){
+    $('html, body').animate({scrollTop: '+=2401px'}, 1200);
+  });
+}
 // Project name and Project technologies
-$('.ProjectTechnologies').hide();
-$('.projectName').hide();
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+  $('.ProjectTechnologies').show();
+  $('.projectName').show();
+}
+else{
+  $('.ProjectTechnologies').hide();
+  $('.projectName').hide();
+}
 
 $('.firstProject').mouseover(function (){
     $('#debonName').show( "fast", function() {

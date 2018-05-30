@@ -189,6 +189,32 @@ text-decoration:none;
   font-family: 'Playfair Display', serif;
 }
 /* Icons */
+    /* HTML */
+    .pnghtml{
+      width:49%;
+      margin-left:51%;
+      padding-top:130px;
+    }
+    @media (max-width: 992px) {
+      .pnghtml {
+        margin-left:27%;
+        width:48%;
+        padding-top:20px;
+      }
+    }
+    .pngresponsive{
+      width:45%;
+      margin-left:49%;
+      margin-top:10%;
+    }
+    @media (max-width: 992px) {
+      .pngresponsive {
+        margin-left:24%;
+        width:45%;
+        padding-top:25px;
+        margin-top:0;
+      }
+    }
     /* JS */
     .pngjs{
       width:54%;
@@ -200,7 +226,7 @@ text-decoration:none;
       .pngjs {
         margin-left:25%;
         width:51%;
-        padding-top:0px;
+        padding-top:50px;
         margin-top:0;
         height:auto;
       }
@@ -208,14 +234,14 @@ text-decoration:none;
 
     .pngjquery{
       width:45%;
-      margin-top:5%;
+      margin-top:7%;
       margin-left:30%;
     }
     @media (max-width: 992px) {
       .pngjquery {
         margin-left: 27%;
         width: 45%;
-        padding-top: 0px;
+        padding-top: 25px;
         margin-top: 0;
       }
     }
@@ -224,32 +250,6 @@ text-decoration:none;
       margin-left:50%;
       margin-top:5%;
        display: none;
-    }
-    /* HTML */
-    .pnghtml{
-      width:49%;
-      margin-left:51%;
-      padding-top:130px;
-    }
-    @media (max-width: 992px) {
-      .pnghtml {
-        margin-left:27%;
-        width:48%;
-        padding-top:100px;
-      }
-    }
-    .pngresponsive{
-      width:45%;
-      margin-left:49%;
-      margin-top:10%;
-    }
-    @media (max-width: 992px) {
-      .pngresponsive {
-        margin-left:25%;
-        width:45%;
-        padding-top:0px;
-        margin-top:0;
-      }
     }
     /* CSS */
     .pngcss{
@@ -260,7 +260,7 @@ text-decoration:none;
       .pngcss {
         margin-left:26%;
         width:49%;
-        padding-top:65px;
+        padding-top:50px;
       }
     }
     .pngbootstrap{
@@ -270,9 +270,9 @@ text-decoration:none;
     }
     @media (max-width: 992px) {
       .pngbootstrap {
-        margin-left:25%;
-        width:20%;
-        padding-top:0px;
+        margin-left:38%;
+        width:25%;
+        padding-top:25px;
         margin-top:0;
       }
     }
@@ -284,21 +284,40 @@ text-decoration:none;
     }
 
     /* OTHERS */
-    .pngjoomla{
-      width:51%;
-      margin-left:24.5%;
-    }
     .pnggit{
       width:40%;
       margin-left:50%;
       opacity:1;
-      margin-top:-5%;
-
+      margin-top:-3%;
     }
-    .jpgmysql{
+    @media (max-width: 992px) {
+      .pnggit {
+        margin-left:30%;
+        margin-top: 15px;
+
+      }
+    }
+    .pngjoomla{
+      width:51%;
+      margin-left:25.5%;
+    }
+    @media (max-width: 992px) {
+      .pngjoomla {
+        margin-left:27%;
+        margin-top:25%;
+      }
+    }
+    .pngmysql{
       width:45%;
-      margin-left:10%;
-      margin-top:-10%;
+      margin-left:18%;
+      margin-top:-11%;
+    }
+    @media (max-width: 992px) {
+      .pngmysql {
+        margin-left:29%;
+        margin-top:25%;
+        margin-bottom:10%;
+      }
     }
 /* Slider */
 
@@ -330,48 +349,60 @@ text-decoration:none;
 .projectName{
   position: absolute;
   left:50%;
-  top:24%;
+  top:5%;
   background: rgba(0, 0, 0, 0.66);
   color:white;
   width:50%;
-  height:11%;
+  height:21%;
 }
 .projectText{
-  font-size: 24px;
+  font-size: 2vw;
 margin-left: 5%;
 font-family: 'Oswald', sans-serif;
 z-index:10;
 }
 
+@media (max-width: 768px) {
+  .projectText {
+font-size:6vw;
+  }
+}
 .ProjectTechnologies{
   position: absolute;
   left:7%;
-  bottom:0%;
+  bottom:-6%;
   background: rgba(0, 0, 0, 0.66);
   color:white;
   width:88%;
-  height:15%;
-  margin-bottom: 5%;
+  height:26%;
+}
+
+@media (max-width: 992px) {
+  .ProjectTechnologies {
+height: 31%;
+bottom:-11%;
+  }
 }
 .debonIcons{
-  padding:18px;
-  line-height: 0.5 !important;
+  padding: 10px;
+  line-height: 0.8 !important;
   font-size: 2.5em;
 }
 .templateIcons{
-  font-size: 1.7em;
-  margin-right: 35px;
-  margin-top: 6px;
+  padding:10px;
+  line-height: 0.7 !important;
+  font-size: 2.7em;
 }
 .kosiecIcons{
-  padding:16px;
-  line-height: 1.2 !important;
+  padding:10px;
+  line-height: 1.1 !important;
   font-size: 2.7em;
 }
 .visitWebsiteButton{
   display: flex;
 align-items: center;
 justify-content: center;
+margin-top:8%;
 }
 .visitWebsiteButton:hover{
   text-decoration:none;
