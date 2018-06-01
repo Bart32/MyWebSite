@@ -9,7 +9,7 @@ window.onload = function(){
         $('#contactMenu').text('Contact').fadeIn(500);
         $('#aboutMenu').text('About me').fadeIn(500);
         $('.languageChoiceText').text('Language choice:').fadeIn(500);
-        $('#about1paraghraph').text('Hello, my name is Bartek. Junior front-end developer.').fadeIn(500);
+        $('#about1paraghraph').text('Hello, my name is Bartek. I"m an junior front-end developer.').fadeIn(500);
         $('#about2paraghraph').text("At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks.").fadeIn(500);
         $('#about3paraghraph').text('I would like to continue to gain valuable experience and develop my passion, what is creating websites.').fadeIn(500);
         $('#about4paraghraph').html(" <p class='text'>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Techonolgies what I'm working with: </p>").fadeIn(500);
@@ -22,7 +22,7 @@ window.onload = function(){
         $('#projects4paraghraph').text('At this moment I can be proud of one completed commercial project, but the next one is in realization.').fadeIn(500);
         $('.wyslijWiad').text('Visit website').fadeIn(500);
         $('#contact').text('Contact').fadeIn(500);
-        $('#contact1paraghraph').text('Are you interested cooperation? Maybe you"re looking for a junior to you"r team?').fadeIn(500);
+        $('#contact1paraghraph').text('Would you like to cooperate with me? Maybe you"re looking for a junior to you"r team?').fadeIn(500);
         $('#contact2paraghraph').html(' Write to me, we"ll be in touch. If you want to, check out my <a href="CV/cvENG.pdf">CV.</a> See you later!').fadeIn(500);
         $('#messageSend').text('Send message').fadeIn(500);
         $('#messageTopic').attr("placeholder", "Subject");

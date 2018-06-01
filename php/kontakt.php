@@ -26,16 +26,16 @@ $wiadomosc .= "Wiadomość: " . $message . "\n";
 $sukces = mail($dokogo, $tytul, $wiadomosc, "Od: <$odkogo>");
 
 if ($sukces){
-  $message = "Dzięki za wiadomość, w krótce się odezwe!";
+  $messageText = "Dzięki za wiadomość, w krótce się odezwe!";
 echo "<script type='text/javascript'>
-alert('$message');
+alert('$messageText');
 window.location = 'http://bartoszkosiec.pl/';
 </script>";
 }
 else{
-  $message = "Coś poszło nie tak, spróbuj wysłać wiadomość na bartosz.kosiec@gmail.com.";
+  $messageText = "Coś poszło nie tak, spróbuj wysłać wiadomość na bartosz.kosiec@gmail.com.";
 echo "<script type='text/javascript'>
-alert('$message');
+alert('$messageText');
 window.location = 'http://bartoszkosiec.pl/';
 </script>";
 }
