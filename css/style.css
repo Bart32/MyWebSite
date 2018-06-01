@@ -182,11 +182,8 @@ text-decoration:none;
 .about{
   padding-bottom:30px;
 }
-.aboutHeader{
-  text-align:center;
+#about{
   margin-top:50px;
-  margin-bottom:20px;
-  font-family: 'Playfair Display', serif;
 }
 /* Icons */
     /* HTML */
@@ -294,7 +291,6 @@ text-decoration:none;
       .pnggit {
         margin-left:30%;
         margin-top: 15px;
-
       }
     }
     .pngjoomla{
@@ -334,17 +330,11 @@ text-decoration:none;
   -moz-box-shadow: 0px -9px 38px -36px rgba(0,0,0,0.75);
   box-shadow:0px -9px 38px -36px rgba(0,0,0,0.75);
 }
-.projectsHeader{
-  text-align:center;
-  font-family: 'Playfair Display', serif;
-}
-
 .projects{
     margin-left:13%;
     width: 75%;
     height: auto;
-}
-.projects:hover{
+    margin-top:10%;
 }
 .projectName{
   position: absolute;
@@ -373,31 +363,37 @@ font-size:6vw;
   bottom:-6%;
   background: rgba(0, 0, 0, 0.66);
   color:white;
-  width:88%;
+  width:85%;
   height:26%;
 }
 
 @media (max-width: 992px) {
   .ProjectTechnologies {
-height: 31%;
+height: 24%;
 bottom:-11%;
   }
 }
-.debonIcons{
-  padding: 10px;
-  line-height: 0.8 !important;
-  font-size: 2.5em;
+
+@media (max-width: 776px) {
+  .mobileProjects {
+    margin-top: 10%;
+  }
 }
-.templateIcons{
-  padding:10px;
-  line-height: 0.7 !important;
-  font-size: 2.7em;
+
+
+.projectIcons{
+  font-size: 3vw;
+  padding-top: 2%;
+  padding-left: 4%;
+  display:inline-block;
 }
-.kosiecIcons{
-  padding:10px;
-  line-height: 1.1 !important;
-  font-size: 2.7em;
+
+@media screen and (max-width: 767px) {
+  .projectIcons {
+    font-size: 9vw;
+  }
 }
+
 .visitWebsiteButton{
   display: flex;
 align-items: center;
@@ -408,7 +404,7 @@ margin-top:8%;
   text-decoration:none;
 }
 /* Contact */
-.contact{
+.textHeader{
   text-align:center;
   margin-bottom:20px;
   font-family: 'Playfair Display', serif;

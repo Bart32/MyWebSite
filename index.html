@@ -8,6 +8,7 @@
 
   <script type="text/javascript" src="js/jQuery.js"></script>
   <script type="text/javascript" src="js/skrypt.js"></script>
+  <script type="text/javascript" src="js/EngPl.js"></script>
   <script src="js/bootstrap.min.js"></script>
 
   <!-- Bootstrap -->
@@ -32,9 +33,8 @@
 
 <body>
   <!-- FIXED ELEMENTS -->
-  <div id="testy" style="position:fixed; top:0; left:0;"> :) </div>
   <img src="images/arrow.png" class="arrow hiddenClass" id="backToTop">
-  <div id="LeftIcons" class="hiddenClass">
+  <div id="LeftprojectIcons" class="hiddenClass">
     <a href="https://github.com/Bart32" target="_blank"> <i class="fab fa-github fa-3x fontIcons" style="top:2%;"> </i> </a>
     <a href="https://www.linkedin.com/in/bartosz-kosiec-748301155/" target="_blank"><i class="fab fa-linkedin-in fa-3x fontIcons" style="top:10%;"></i> </a>
     <a href="mailto:adres bartosz.kosiec@gmail.com"><i class="fas fa-at fa-3x fontIcons" style="top:18%;"></i> </a>
@@ -66,8 +66,8 @@
         <div class="col-md-3">
           <p class="languageChoice">
             <span class="languageChoiceText">Wybór języka:</span>
-            <a href="index.html" class="plSite"><img class="flags polFlag" src="images/pol.png" alt="PolandFlag"></a>
-            <a href="en.html" class="engSite"><img class="flags gbFlag" src="images/gb.png" alt="GBFlag"></a>
+            <a href="#" class="plSite" id="plButton"><img class="flags polFlag" src="images/pol.png" alt="PolandFlag"></a>
+            <a href="#" class="engSite" id="engButton"><img class="flags gbFlag" src="images/gb.png" alt="GBFlag"></a>
         </div>
       </div>
       <!-- VIDEO -->
@@ -90,11 +90,11 @@
       <!-- ABOUT ME -->
 
       <div class="col-md-12 about">
-        <h1 id="about" class="aboutHeader"> O mnie </h1>
-        <p class="text">Cześć, jestem Bartek. Początkujący front-end developer. </p>
-        <p class="text">Na ten moment działam jako freelancer, realizujac różnego rodzaju zlecenia.</p>
-        <p class="text">Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijac swoją pasję, jaką jest tworzenie stron internetowych. </p>
-        <p class="text">Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich pracuje to: </p>
+        <h1 id="about" class="textHeader"> O mnie </h1>
+        <p class="text" id="about1paraghraph">Cześć, jestem Bartek. Początkujący front-end developer. </p>
+        <p class="text" id="about2paraghraph">Na ten moment działam jako freelancer, realizujac różnego rodzaju zlecenia.</p>
+        <p class="text" id="about3paraghraph">Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijac swoją pasję, jaką jest tworzenie stron internetowych. </p>
+        <p class="text" id="about4paraghraph">Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich pracuje to: </p>
       </div>
     </div>
     <!-- JS/HTML/CSS -->
@@ -119,7 +119,7 @@
     <!-- OTHER TECHNOLOGIES -->
     <div class="row" style="padding-bottom:6%">
       <div class="col-md-12" style="padding-bottom:8%; padding-top:8%;">
-        <p class="text"><strong>Pracuje także z: </strong></p>
+        <p class="text" id="about5paraghraph"><strong>Pracuje także z: </strong></p>
       </div>
       <div class="col-md-4"> <img src="images/ikony/git.png" class="pnggit hiddenClass" id="gitpng"> </div>
       <div class="col-md-4"> <img src="images/ikony/joomla.png" class="pngjoomla hiddenClass" id="joomlapng"> </div>
@@ -129,65 +129,72 @@
 
     <div class="row shadows">
       <div class="col-md-12" style="  margin-top:4%;">
-        <h1 class="projectsHeader" id="projects"> Projekty </h1>
-        <p class="text">Poniżej znajdziesz kilka projektów, nad którymi pracowałem. </p>
-        <p class="text">Potrafie zaró sam stworzyć szablon lub zintegrować gotowy projekt z systemem zarządzania treścią.</p>
-        <p class="text">Do tej pory przy projektach pracowałem głównie z CMS Joomla, lecz jestem otwarty na nowe rozwiązania.</p>
-        <p class="text"> Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt jest juz w realizacji.
+        <h1 class="textHeader" id="projects"> Projekty </h1>
+        <p class="text" id="projects1paraghraph">Poniżej znajdziesz kilka projektów, nad którymi pracowałem. </p>
+        <p class="text" id="projects2paraghraph">Potrafie zarówno sam stworzyć szablon lub zintegrować gotowy projekt z systemem zarządzania treścią.</p>
+        <p class="text" id="projects3paraghraph">Do tej pory przy projektach pracowałem głównie z CMS Joomla, lecz jestem otwarty na nowe rozwiązania.</p>
+        <p class="text" id="projects4paraghraph"> Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt jest juz w realizacji.
         </p>
       </div>
 
       <div class="col-md-4" style="padding-bottom: 50px; padding-top: 7%;">
-        <div class="col-md-12">
+        <div class="col-md-12 mobileProjects">
           <div class="projectName" id="debonName">
             <p class="projectText"> DEBON </p>
           </div>
           <img src="images/projects/debonSmall.png" alt="" class="projects hiddenClass" id="debon">
           <div class="ProjectTechnologies" id="debonTechnologies">
-            <i class="fab fa-joomla  debonIcons"></i>
-            <i class="devicon-html5-plain-wordmark debonIcons"></i>
-            <i class="devicon-css3-plain-wordmark  debonIcons"></i>
-            <i class="devicon-javascript-plain   debonIcons"></i>
-            <i class="devicon-jquery-plain-wordmark  debonIcons"></i>
+            <div class="col-md-12">
+              <i class="devicon-html5-plain-wordmark projectIcons" style="margin-left: -5%;"></i>
+              <i class="devicon-css3-plain-wordmark  projectIcons"></i>
+              <i class="devicon-javascript-plain   projectIcons"></i>
+              <i class="devicon-jquery-plain-wordmark  projectIcons"></i>
+              <i class="fab fa-joomla  projectIcons"></i>
+            </div>
           </div>
         </div>
         <div class="col-md-12">
-          <a target="_blank" href="http://debon.com.pl/" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad firstProject">Odwiedź witrynę </button> </a>
+          <a target="_blank" href="http://debon.com.pl/" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad firstProject" >Odwiedź witrynę </button> </a>
         </div>
       </div>
+
       <div class="col-md-4" style="padding-top: 7%;">
-        <div class="col-md-12">
+        <div class="col-md-12 mobileProjects">
           <div class="projectName" id="templateName">
-            <p class="projectText"> W REALIZACJI </p>
+            <p class="projectText" > W REALIZACJI </p>
           </div>
           <img src="images/projects/templateSmall.png" alt="" class="projects hiddenClass" id="template" />
           <div class="ProjectTechnologies" id="templateTechnologies">
-
-              <i class="fab fa-joomla  templateIcons"></i>
-              <i class="devicon-html5-plain-wordmark templateIcons"></i>
-              <i class="devicon-css3-plain-wordmark  templateIcons"></i>
+            <div class="col-md-12 ">
+              <i class="devicon-html5-plain-wordmark projectIcons " style="margin-left: -5%;"></i>
+              <i class="devicon-css3-plain-wordmark projectIcons "></i>
+              <i class="fab fa-joomla  projectIcons "></i>
+            </div>
           </div>
         </div>
         <div class="col-md-12">
           <a target="_blank" href="http://serwer1654807.home.pl/Bartek/budowlana/" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad secondProject">Odwiedź witrynę </button> </a>
         </div>
       </div>
+
       <div class="col-md-4" style="padding-bottom: 50px; padding-top: 7%;">
-        <div class="col-md-12">
+        <div class="col-md-12 mobileProjects">
           <div class="projectName" id="kosiecName">
-            <p class="projectText"> KOSIEC </p>
+            <p class="projectText"> PORTFOLIO </p>
           </div>
           <img src="images/projects/bartekSmall.png" alt="" class="projects hiddenClass" id="bartek">
           <div class="ProjectTechnologies" id="kosiecTechnologies">
-            <i class="devicon-html5-plain-wordmark kosiecIcons"></i>
-            <i class="devicon-css3-plain-wordmark  kosiecIcons"></i>
-            <i class="devicon-javascript-plain   kosiecIcons"></i>
-            <i class="devicon-jquery-plain-wordmark  kosiecIcons"></i>
-            <i class="devicon-github-plain-wordmark  kosiecIcons"></i>
+            <div class="col-md-12">
+              <i class="devicon-html5-plain-wordmark projectIcons" style="margin-left: -5%;"></i>
+              <i class="devicon-css3-plain-wordmark  projectIcons"></i>
+              <i class="devicon-javascript-plain   projectIcons"></i>
+              <i class="devicon-jquery-plain-wordmark  projectIcons"></i>
+              <i class="devicon-github-plain-wordmark  projectIcons"></i>
+            </div>
           </div>
         </div>
         <div class="col-md-12">
-            <a target="_blank" href="#" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad thirdProject">Odwiedź witrynę </button> </a>
+          <a target="_blank" href="#" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad thirdProject">Odwiedź witrynę </button> </a>
         </div>
       </div>
     </div>
@@ -195,9 +202,9 @@
     <div class="row shadows" style="padding-top:4%;">
       <div class="col-md-1"></div>
       <div class="col-md-10">
-        <h1 id="contact" class="contact"> Kontakt </h1>
-        <p class="text">Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?
-          <p class="text"> Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href="#">CV.</a> Do usłyszenia! </p>
+        <h1 id="contact" class="textHeader"> Kontakt </h1>
+        <p class="text" id="contact1paraghraph">Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?
+          <p class="text" id="contact2paraghraph"> Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href="CV/CV.pdf" target="_blank">CV.</a> Do usłyszenia! </p>
       </div>
       <div class="col-md-1"></div>
     </div>
@@ -212,9 +219,9 @@
             <input type="text" class="form-control cForm" id="messageTopic" placeholder="Temat" name="ftopic" required>
           </div>
           <div class="form-group">
-            <textarea class="form-control cForm" rows="7" id="messageText" placeholder="Tekst wiadomości" name="ftext" required></textarea>
+            <textarea class="form-control cForm" rows="7" id="messageText" placeholder="Treść wiadomości" name="ftext" required></textarea>
           </div>
-          <button type="submit" class="btn wyslijWiad" name="fsend">Wyślij wiadomość </button>
+          <button type="submit" class="btn wyslijWiad" name="fsend" id="messageSend">Wyślij wiadomość </button>
         </form>
       </div>
       <div class="col-md-2"></div>
@@ -234,7 +241,7 @@
           </ul>
         </div>
         <div class="col-md-12">
-          <p class="text" style="font-size:17px;">© 2018 Copyright: Bartosz Kosiec </p>
+          <p class="footerText" style="font-size:17px; text-align:Center;">© 2018 Copyright: Bartosz Kosiec </p>
         </div>
       </div>
     </div>
