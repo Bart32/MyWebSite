@@ -27,6 +27,7 @@ window.onload = function(){
         $('#messageSend').text('Send message').fadeIn(500);
         $('#messageTopic').attr("placeholder", "Subject");
         $('#messageText').attr("placeholder", "Message");
+      document.contactFormName.action = "php/contact.php";
     });
 
   });
@@ -57,6 +58,7 @@ window.onload = function(){
           $('#messageSend').text('Wyślij wiadomość').fadeIn(500);
           $('#messageTopic').attr("placeholder", "Temat");
           $('#messageText').attr("placeholder", "Treść wiadomości");
+          document.contactFormName.action = "php/kontakt.php";
         });
 
       });
