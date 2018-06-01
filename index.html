@@ -161,7 +161,7 @@
       <div class="col-md-4" style="padding-top: 7%;">
         <div class="col-md-12 mobileProjects">
           <div class="projectName" id="templateName">
-            <p class="projectText" > W REALIZACJI </p>
+            <p class="projectText" id="projectInRealization"> W REALIZACJI </p>
           </div>
           <img src="images/projects/templateSmall.png" alt="" class="projects hiddenClass" id="template" />
           <div class="ProjectTechnologies" id="templateTechnologies">
@@ -211,15 +211,15 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
-        <form class="form-horizontal contactF" action="#" id="ContactForm">
+        <form class="form-horizontal contactF" action="php/kontakt.php" method="post" id="ContactForm">
           <div class="form-group">
-            <input type="email" class="form-control cForm" id="email" placeholder="E-mail" name="femail" required>
+            <input type="email" class="form-control cForm" id="email" placeholder="E-mail" name="email" required>
           </div>
           <div class="form-group">
-            <input type="text" class="form-control cForm" id="messageTopic" placeholder="Temat" name="ftopic" required>
+            <input type="text" class="form-control cForm" id="messageTopic" placeholder="Temat" name="name" required>
           </div>
           <div class="form-group">
-            <textarea class="form-control cForm" rows="7" id="messageText" placeholder="Treść wiadomości" name="ftext" required></textarea>
+            <textarea class="form-control cForm" rows="7" id="messageText" placeholder="Treść wiadomości" name="message" required></textarea>
           </div>
           <button type="submit" class="btn wyslijWiad" name="fsend" id="messageSend">Wyślij wiadomość </button>
         </form>

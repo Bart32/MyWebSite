@@ -3,7 +3,7 @@ window.onload = function(){
 
   // ENG / PL
   $('#engButton').click(function(){
-    $('.menuItem, .textHeader, .text, .wyslijWiad, .languageChoiceText').fadeOut(500, function() {
+    $('.menuItem, .textHeader, .text, .wyslijWiad, .languageChoiceText, #projectInRealization').fadeOut(500, function() {
         $('#about').text('About me').fadeIn(500);
         $('#projectsMenu').text('Projects').fadeIn(500);
         $('#contactMenu').text('Contact').fadeIn(500);
@@ -13,6 +13,7 @@ window.onload = function(){
         $('#about2paraghraph').text("At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks.").fadeIn(500);
         $('#about3paraghraph').text('I would like to continue to gain valuable experience and develop my passion, what is creating websites.').fadeIn(500);
         $('#about4paraghraph').html(" <p class='text'>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Techonolgies what I'm working with: </p>").fadeIn(500);
+        $('#projectInRealization').text("IN REALIZATION").fadeIn(500);
         $('#projects').text('Projects').fadeIn(500);
         $('#about5paraghraph').html('<p class="text"><strong>I"m also using: </strong></p>').fadeIn(500);
         $('#projects1paraghraph').text('Below you can find a few of my realizations.').fadeIn(500);
@@ -22,7 +23,7 @@ window.onload = function(){
         $('.wyslijWiad').text('Visit website').fadeIn(500);
         $('#contact').text('Contact').fadeIn(500);
         $('#contact1paraghraph').text('Are you interested cooperation? Maybe you"re looking for a junior to you"r team?').fadeIn(500);
-        $('#contact2paraghraph').html(' Write to me, we"ll be in touch. If you want to, check out my <a href="CV/CV.pdf">CV.</a> See you later!').fadeIn(500);
+        $('#contact2paraghraph').html(' Write to me, we"ll be in touch. If you want to, check out my <a href="CV/cvENG.pdf">CV.</a> See you later!').fadeIn(500);
         $('#messageSend').text('Send message').fadeIn(500);
         $('#messageTopic').attr("placeholder", "Subject");
         $('#messageText').attr("placeholder", "Message");
@@ -32,7 +33,7 @@ window.onload = function(){
 
 
     $('#plButton').click(function(){
-      $('.menuItem, .textHeader, .text, .wyslijWiad, .languageChoiceText').fadeOut(500, function() {
+      $('.menuItem, .textHeader, .text, .wyslijWiad, .languageChoiceText, #projectInRealization').fadeOut(500, function() {
           $('#about').text('O mnie').fadeIn(500);
           $('#projectsMenu').text('Projekty').fadeIn(500);
           $('#contactMenu').text('Kontakt').fadeIn(500);
@@ -44,6 +45,7 @@ window.onload = function(){
           $('#about4paraghraph').html("<p class='text' id='about4paraghraph'>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich pracuje to: </p>").fadeIn(500);
           $('#projects').text('Projects').fadeIn(500);
           $('#about5paraghraph').html('<p class="text"><strong>Pracuje także z: </strong></p>').fadeIn(500);
+         $('#projectInRealization').text("W REALIZACJI").fadeIn(500);
           $('#projects1paraghraph').text('Poniżej znajdziesz kilka projektów, nad którymi pracowałem. ').fadeIn(500);
           $('#projects2paraghraph').text('Potrafie zarówno sam stworzyć szablon lub zintegrować gotowy projekt z systemem zarządzania treścią.').fadeIn(500);
           $('#projects3paraghraph').text('Do tej pory przy projektach pracowałem głównie z CMS Joomla, lecz jestem otwarty na nowe rozwiązania.').fadeIn(500);
@@ -51,7 +53,7 @@ window.onload = function(){
           $('.wyslijWiad').text('Odwiedź witrynę').fadeIn(500);
           $('#contact').text('Kontakt').fadeIn(500);
           $('#contact1paraghraph').text('Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?').fadeIn(500);
-          $('#contact2paraghraph').html('    <p class="text" id="contact2paraghraph"> Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href="CV/CV.pdf" target="_blank">CV.</a> Do usłyszenia! </p>').fadeIn(500);
+          $('#contact2paraghraph').html('    <p class="text" id="contact2paraghraph"> Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href="CV/cvPL.pdf" target="_blank">CV.</a> Do usłyszenia! </p>').fadeIn(500);
           $('#messageSend').text('Wyślij wiadomość').fadeIn(500);
           $('#messageTopic').attr("placeholder", "Temat");
           $('#messageText').attr("placeholder", "Treść wiadomości");
@@ -61,6 +63,7 @@ window.onload = function(){
 // Showing button, left icons and html, css, js images
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
   $('.hiddenClass');
+  $('.languageChoiceText').hide();
 }
 else{
 $('.hiddenClass').hide();
@@ -136,7 +139,7 @@ else{
     $('html, body').animate({scrollTop: '+=1704px'}, 1200);
   });
   $('#contactMenu').click(function (){
-    $('html, body').animate({scrollTop: '+=2401px'}, 1200);
+    $('html, body').animate({scrollTop: '+=2421px'}, 1200);
   });
 }
 // Project name and Project technologies
