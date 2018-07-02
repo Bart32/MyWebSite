@@ -7,6 +7,14 @@ window.onload = function() {
     $('.hiddenClass').hide();
   }
 
+// LOADER
+ function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("webSite").style.display = "block";
+}
+      setTimeout(showPage, 700);
+
+
   // ENG / PL
   $('#engButton').click(function() {
     $('.menuItem, .textHeader, .text, .wyslijWiad,#projectInRealization').fadeOut(500, function() {
@@ -29,12 +37,9 @@ window.onload = function() {
       $('#messageSend').html('Send message').fadeIn(500);
       document.getElementById('messageTopic').setAttribute("placeholder", "Subject");
       document.getElementById('messageText').setAttribute("placeholder", "Message");
-      document.contactFormName.action = "php/contact.php";
+      document.getElementById("ContactForm").action = "php/contact.php";
     });
-
   });
-
-
   $('#plButton').click(function() {
 
     $('.menuItem, .textHeader, .text, .wyslijWiad,#projectInRealization').fadeOut(500, function() {
@@ -57,26 +62,30 @@ window.onload = function() {
       $('#messageSend').html('Wyślij wiadomość').fadeIn(500);
       document.getElementById('messageTopic').setAttribute("placeholder", "Temat");
       document.getElementById('messageText').setAttribute("placeholder", "Treść wiadomości");
-      document.contactFormName.action = "php/kontakt.php";
+      document.getElementById("ContactForm").action = "php/kontakt.php";
     });
 
   });
-  // Showing button, left icons and html, css, js images
-
-
-
+  // Loading images
   window.onscroll = function() {
-
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     if (window.pageYOffset < 50) {
       $('.flags').show();
-    } else {
+    }
+    else {
       $('.flags').hide();
     }
+  }
 
-    if (window.pageYOffset > 320) {
+    if (window.pageYOffset > 250) {
       $('#jspng').slideDown();
+      $('#descriptionText').slideDown();
+      $('#descriptionImg').slideDown();
       $('#htmlpng').slideDown();
       $('#csspng').slideDown();
+      $('#hiddenJS').slideDown();
+      $('#hiddenHTML').slideDown();
+      $('#hiddenCSS').slideDown();
 
     }
 
@@ -88,25 +97,12 @@ window.onload = function() {
       $('#LeftIcons').hide();
     }
 
-    if (window.pageYOffset > 525) {
-      $('#responsivepng').slideDown();
-      $('#bootstrappng').slideDown();
-      $('#jquerypng').slideDown();
-    }
-
-    if (window.pageYOffset > 820) {
-      $('#gitpng').slideDown();
-      $('#joomlapng').slideDown();
-      $('#mysqlpng').slideDown();
-    }
-
-    if (window.pageYOffset > 1450) {
+    if (window.pageYOffset > 1150) {
       $('#debon').slideDown();
       $('#template').slideDown();
       $('#bartek').slideDown();
     }
   }
-
 
   $('#backToTop').click(function() {
     $('html, body').animate({
@@ -139,15 +135,54 @@ window.onload = function() {
     });
     $('#projectsMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=1704px'
+        scrollTop: '+=1750px'
       }, 1200);
     });
     $('#contactMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=2421px'
+        scrollTop: '+=2500px'
       }, 1200);
     });
   }
+
+  // Skill's description
+
+    const skillImgSrc = [
+      'images/ikony/js.png',
+      'images/ikony/css.png',
+      'images/ikony/html.png',
+      'images/ikony/react.png',
+      'images/ikony/bootstrap.png',
+      'images/ikony/responsive.png',
+      'images/ikony/jquery.jpg',
+      'images/ikony/joomla.png',
+      'images/ikony/git.jpg'
+    ];
+    const skillTextDescription = [
+      "Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu. Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.",
+      "CSS ipsum ",
+      "HTML ipsum ipsum",
+      "Aktualnie jestem w trakcie nauki biblioteki React.js. Znam już podstawowe założenia oraz widze korzyści płynące z dzielenia kodu na moduły. Powoli zaczynam dostrzegać możliwości Reacta poznając innego jego funkcje. Jestem także w trakcie tworzenia projektu, który niedługo znajdzie się na moim githubie.",
+      "Framework Bootstrap głównie pomaga mi przy tworzeniu responsywności strony, czasami korzystam z innych jego elementów, takich jak gotowe menu, czy dobrze wystylizowane buttony.",
+      "Zawsze staram się, aby moje projekty wyglądały dobrze w każdej rozdzielczości, zarówno na szerokich monitorach, jak i na tabletach, na telefonach komórkowych kończąc.",
+      "Biblioteka jQuery znacznie przyśpiesza moją prace z javascriptem, niestety często kosztem wydajności strony. Do tej pory używałem głównie prostych funkcji, które pomagały mi uzyskiwać animacje na stronach. Cały czas poznaję możliwości tej biblioteki, po przez stosowanie jej w moich projektach.",
+      "Dwa projekty komercyjne, oraz kilka projektów niekomercyjnych, pozwoliły mi poznać CMS, jakim jest Joomla! Potrafie podpiąć pod Joomle gotowy szablon, tworząc włąsne moduły, jak i zaprojektować stronę od początku do samego końca.",
+      "System kontroli wersji GIT, pomaga mi w utrzymaniu mojego kodu. Poprzez dość częste commity, w razie problemu mogę cofnąć program do działającej wersji."
+    ]
+    const arrayOfSkillsImg = document.getElementById('arrayOfSkillsImg').getElementsByTagName('img');
+    var descriptionImg = $("#descriptionImg");
+    var descriptionText = $("#descriptionText");
+    for (var i = 0; i <= arrayOfSkillsImg.length-1; i++){
+      $(arrayOfSkillsImg[i]).click(function(){
+        var indexOfClickedElement = ( $(arrayOfSkillsImg).index(this) );
+        descriptionImg.fadeOut('fast', function(){
+        descriptionImg.attr('src', skillImgSrc[indexOfClickedElement]);
+        descriptionText.text(skillTextDescription[indexOfClickedElement]);
+        descriptionImg.fadeIn('fast');
+        });
+});
+};
+
   // Project name and Project technologies
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     $('.ProjectTechnologies').show();
@@ -157,7 +192,9 @@ window.onload = function() {
     $('.projectName').hide();
   }
 
-  $('.firstProject').mouseover(function() {
+   const arrayOfProjectsButtons = document.getElementById('projectsRow').getElementsByTagName('button')
+
+  $(arrayOfProjectsButtons[0]).mouseover(function() {
     $('#debonName').show("fast", function() {});
     $('#debonTechnologies').show("fast", function() {});
   }).mouseout(function() {
@@ -165,7 +202,7 @@ window.onload = function() {
     $('#debonTechnologies').hide("fast", function() {});
   });
 
-  $('.secondProject').mouseover(function() {
+  $(arrayOfProjectsButtons[1]).mouseover(function() {
     $('#templateName').show("fast", function() {});
     $('#templateTechnologies').show("fast", function() {});
   }).mouseout(function() {
@@ -173,7 +210,7 @@ window.onload = function() {
     $('#templateTechnologies').hide("fast", function() {});
   });
 
-  $('.thirdProject').mouseover(function() {
+  $(arrayOfProjectsButtons[2]).mouseover(function() {
     $('#kosiecName').show("fast", function() {});
     $('#kosiecTechnologies').show("fast", function() {});
   }).mouseout(function() {
