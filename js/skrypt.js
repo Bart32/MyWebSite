@@ -1,83 +1,157 @@
 window.onload = function() {
 
- // Turning off animations on phone
+  // Turning off animations on phone
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     $('.hiddenClass');
   } else {
     $('.hiddenClass').hide();
   }
 
+  // LOADER
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("webSite").style.display = "block";
+  }
+  setTimeout(showPage, 700);
+
+  // Skill's description
+
+  const skillImgSrc = [
+    'images/ikony/js.png',
+    'images/ikony/css.png',
+    'images/ikony/html.png',
+    'images/ikony/react.png',
+    'images/ikony/bootstrap.png',
+    'images/ikony/responsive.png',
+    'images/ikony/jquery.jpg',
+    'images/ikony/joomla.png',
+    'images/ikony/git.jpg'
+  ];
+  const skillTextDescriptionPL = [
+    "Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu. Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.",
+    "W CSS czuję się dobrze. Potrafie min. nadawać responsywnść elementom na stronie, manipulowac ich wyglądem z wykorzystaniem pseudoklas, tworzyć proste animacje z użyciem transition. Lubię nieszablonowe rozwiązania, praca z arkuszem stylów sprawia mi przyjemność.",
+    "W HTML poruszam się bardzo sprawnie, dobrze znam jego składnie, przez co praca w tej technologi idzie mi płynnie oraz bezproblemowo.",
+    "Aktualnie jestem w trakcie nauki biblioteki React.js. Znam już podstawowe założenia oraz widze korzyści płynące z dzielenia kodu na moduły. Powoli zaczynam dostrzegać możliwości Reacta poznając innego jego funkcje. Jestem także w trakcie tworzenia projektu, który niedługo znajdzie się na moim githubie.",
+    "Framework Bootstrap głównie pomaga mi przy tworzeniu responsywności strony, czasami korzystam z innych jego elementów, takich jak gotowe menu, czy gotowe buttony.",
+    "Zawsze staram się, aby moje projekty wyglądały dobrze w każdej rozdzielczości, zarówno na szerokich monitorach, tabletach, na telefonach komórkowych kończąc.",
+    "Biblioteka jQuery znacznie przyśpiesza moją prace z javascriptem. Rozumiem minusy związane z wydajnością strony podczas korzystania z tej biblioteki, dlatego staram się jej nie nadużywać. Do tej pory używałem głównie prostych funkcji, które pomagały mi uzyskiwać animacje na stronach. Cały czas poznaję możliwości jQuery, po przez wykorzystanie niektórych elementów w moich projektach.",
+    "Dwa projekty komercyjne, oraz kilka projektów niekomercyjnych, pozwoliły mi poznać CMS, jakim jest Joomla! Potrafie podpiąć pod Joomle gotowy szablon, tworzyć włąsne moduły, oraz zaprojektować stronę od początku do samego końca.",
+    "System kontroli wersji GIT, służy mi głównie do dziela się moim kodem z innymi. Pozwala mi także, w razie problemów, wrócić do poprzedniej wersji mojego projektu"
+  ]
+  const skillTextDescriptionENG = [
+    "I devote a lot of time to learning Javascript. I believe that you should learn this language from scratch in order to better understand what happens when using different libraries or frameworks. I always try to find the most optimal solution to the problem. I have already created a few projects, some of them can be found on my github.",
+    "I feel good in CSS. For example I can make page elements responsive, manipulate their appearance using pseudoclas, create simple animations using the transition. I like unconventional solutions, working with a style sheet is a pleasure for me",
+    "I work very well in HTML, I know its syntax well, which makes working in this technology smooth and problem-free.",
+    "I am currently in the process of learning the React.js library. I know the basic assumptions and I see the benefits of dividing the code into modules.I'm slowly starting to see see possibilities of React, learning his other functions. I am also in the process of creating a project that will be avilable soon be on my github.",
+    "The Bootstrap framework mainly helps me make the website responsive, sometimes I'm also use other elements, such as a ready menu or ready buttons.",
+    "I always try to make my projects look good in every resolution, both on wide monitors, tablets and on mobile phones.",
+    "jQuery library accelerates my work with Javascript. I know cons related to performance website when using this library, so I try not to abuse it. So far, I've used mainly simple functions that helped me get animations on pages. I learn jQuery all the time, by using some elements in my projects.",
+    "Two commercial projects and  a few non-commercial projects, let me get to know CMS, which is Joomla! I can connect a ready template to Joomla, create my own modules and make a project of website from begging to end.",
+    "GIT version control system , is mainly used to share my code with others. It also allows me to return to the previous version of my project in case of any problem"
+  ]
+
+  var skillTextDescription = skillTextDescriptionPL;
+  const arrayOfSkillsImg = document.getElementById('arrayOfSkillsImg').getElementsByTagName('img');
+  var descriptionImg = $("#descriptionImg");
+  var descriptionText = $("#descriptionText");
+  for (var i = 0; i <= arrayOfSkillsImg.length - 1; i++) {
+    $(arrayOfSkillsImg[i]).click(function() {
+      var indexOfClickedElement = ($(arrayOfSkillsImg).index(this));
+      descriptionImg.fadeOut('fast', function() {
+        descriptionImg.attr('src', skillImgSrc[indexOfClickedElement]);
+        descriptionText.text(skillTextDescription[indexOfClickedElement]);
+        descriptionImg.fadeIn('fast');
+      });
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $('html, body').animate({
+          scrollTop: $('#descriptionImg').offset().top
+        }, 1200);
+      }
+    });
+  };
+
   // ENG / PL
+  const projectsHeader = document.getElementsByClassName('projectsHeader');
+  const wyslijWiad = document.getElementsByClassName('wyslijWiad');
+  const contact = document.getElementById('contact');
+  const messageSend = document.getElementById('messageSend');
+  const projectInRealization = document.getElementById('projectInRealization');
+
   $('#engButton').click(function() {
-    $('.menuItem, .textHeader, .text, .wyslijWiad,#projectInRealization').fadeOut(500, function() {
+
+    skillTextDescription = skillTextDescriptionENG;
+    descriptionImg.attr('src', skillImgSrc[0]);
+
+    $('.menuItem, #about').fadeOut(500, function() {
       $('#projectsMenu').html('Projects').fadeIn(500);
       $('#contactMenu').html('Contact').fadeIn(500);
       $('#aboutMenu').html('About me').fadeIn(500);
 
-      $("#about").html(" <h1> About me </h1><p class='text'> Hello, my name is Bartek. I'm an junior front-end developer. <br> At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks. <br> I would like to continue to gain valuable experience and develop my passion, what is creating websites. <br>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Techonolgies what I'm working with: </p>").fadeIn(500);
+      $("#about").html(" <h1> About me </h1><p class='text'> Hello, my name is Bartek. I'm an junior front-end developer. <br> At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks. <br> I would like to continue to gain valuable experience and develop my passion, what is creating websites. <br>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Technologies in which I feel best: </p>").fadeIn(500);
 
-      $('#alsoWorkingWith').html('<p class="text"><strong>I"m also using: </strong></p>').fadeIn(500);
-      $('#projectInRealization').html("IN REALIZATION").fadeIn(500);
+      descriptionText.html("I devote a lot of time to learning Javascript. I believe that you should learn this language from scratch in order to better understand what happens when using different libraries or frameworks. I always try to find the most optimal solution to the problem. I have already created a few projects, some of them can be found on my github.");
 
-      $("#projects").html(" <h1> Projects </h1><p class='text'> Below you can find a few of my realizations. <br> I can create templates and also integrate ready project with CMS. <br> So far, I have been working on projects with CMS Joomla, but I am open to new solutions. <br>At this moment I can be proud of one completed commercial project, but the next one is in realization. </p>").fadeIn(500);
+      projectsHeader[0].innerHTML = " <h1> Projects </h1><p class='text'> Below you can find a few of my realizations. <br> I can create templates and also integrate ready project with CMS. <br> So far, I have been working on projects with CMS Joomla, but I am open to new solutions. <br>At this moment I can be proud of one completed commercial project, but the next one is in realization. </p>";
 
-      $('#projectInRealization').html("IN REALIZATION").fadeIn(500);
-      $('.wyslijWiad').html('Visit website').fadeIn(500);
+      projectInRealization.innerHTML = "IN REALIZATION";
 
-      $("#contact").html(" <h1> Contact </h1><p class='text'> Would you like to cooperate with me? Maybe you're looking for a junior to you'r team? <br> Write to me, we'll be in touch. If you want to, check out my <a href='CV/cvENG.pdf'>CV.</a> See you later! </p>").fadeIn(500);
+      for (j = 0; j < wyslijWiad; j++) {
+        wyslijWiad[j].innerHTML = 'Visit website';
+      }
 
-      $('#messageSend').html('Send message').fadeIn(500);
+      contact.innerHTML = "<h1> Contact </h1><p class='text'> Would you like to cooperate with me? Maybe you're looking for a junior to you'r team? <br> Write to me, we'll be in touch. If you want to, check out my <a href='CV/cvENG.pdf'>CV.</a> See you later! </p>";
+
+
+      messageSend.innerHTML = 'Send message';
       document.getElementById('messageTopic').setAttribute("placeholder", "Subject");
       document.getElementById('messageText').setAttribute("placeholder", "Message");
-      document.contactFormName.action = "php/contact.php";
+      document.getElementById("ContactForm").action = "php/contact.php";
     });
-
   });
-
-
   $('#plButton').click(function() {
 
-    $('.menuItem, .textHeader, .text, .wyslijWiad,#projectInRealization').fadeOut(500, function() {
+    skillTextDescription = skillTextDescriptionPL;
+    descriptionImg.attr('src', skillImgSrc[0]);
+
+    $('.menuItem, #about').fadeOut(500, function() {
       $('#projectsMenu').html('Projekty').fadeIn(500);
       $('#contactMenu').html('Kontakt').fadeIn(500);
       $('#aboutMenu').html('O mnie').fadeIn(500);
 
-      $("#about").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich pracuję to: </p>").fadeIn(500);
+      $("#about").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich czuję sie najlepiej: </p>").fadeIn(500);
 
-      $('#alsoWorkingWith').html('<p class="text"><strong>Pracuję także z: </strong></p>').fadeIn(500);
-      $('#projectInRealization').html("IN REALIZATION").fadeIn(500);
+      descriptionText.html(" Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu. Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.");
 
-      $("#projects").html(" <h1> Projekty </h1><p class='text'>Poniżej znajdziesz kilka projektów, nad którymi pracowałem. <br> Potrafię zarówno sam stworzyć szablon, jak i zintegrować gotowy projekt z systemem zarządzania treścią. <br> Do tej pory przy projektach pracowałem głównie z CMS Joomla, lecz jestem otwarty na nowe rozwiązania. <br>Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt jest już w realizacji. </p>").fadeIn(500);
+      projectsHeader[0].innerHTML = " <h1> Projekty </h1><p class='text'>Poniżej znajdziesz kilka projektów, nad którymi pracowałem. <br> Potrafię zarówno sam stworzyć szablon, jak i zintegrować gotowy projekt z systemem zarządzania treścią. <br> Do tej pory przy projektach pracowałem głównie z CMS Joomla, lecz jestem otwarty na nowe rozwiązania. <br>Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt jest już w realizacji. </p>";
 
-      $('#projectInRealization').html("W REALIZACJI").fadeIn(500);
-      $('.wyslijWiad').html('Odwiedź witrynę').fadeIn(500);
+      projectInRealization.innerHTML = "W realizacji";
 
-      $("#contact").html(" <h1> Contact </h1><p class='text'> Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?' <br>Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href='CV/cvPL.pdf' target='_blank'>CV.</a> Do usłyszenia! </p>").fadeIn(500);
+      for (j = 0; j < wyslijWiad; j++) {
+        wyslijWiad[j].innerHTML = 'Odwiedź witrynę';
+      }
 
-      $('#messageSend').html('Wyślij wiadomość').fadeIn(500);
+      contact.innerHTML = "<h1> Kontakt </h1><p class='text'> Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?' <br>Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href='CV/cvPL.pdf' target='_blank'>CV.</a> Do usłyszenia! </p>";
+
+
+      messageSend.innerHTML = 'Wyślij wiadomość';
       document.getElementById('messageTopic').setAttribute("placeholder", "Temat");
       document.getElementById('messageText').setAttribute("placeholder", "Treść wiadomości");
-      document.contactFormName.action = "php/kontakt.php";
+      document.getElementById("ContactForm").action = "php/kontakt.php";
     });
-
   });
-  // Showing button, left icons and html, css, js images
 
-
-
+  // Loading images
   window.onscroll = function() {
-
-    if (window.pageYOffset < 50) {
-      $('.flags').show();
-    } else {
-      $('.flags').hide();
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      if (window.pageYOffset < 50) {
+        $('.flags').show();
+      } else {
+        $('.flags').hide();
+      }
     }
 
-    if (window.pageYOffset > 320) {
-      $('#jspng').slideDown();
-      $('#htmlpng').slideDown();
-      $('#csspng').slideDown();
-
+    if (window.pageYOffset > 180) {
+      $('#skillsRow').slideDown();
     }
 
     if (window.pageYOffset > 350) {
@@ -88,25 +162,13 @@ window.onload = function() {
       $('#LeftIcons').hide();
     }
 
-    if (window.pageYOffset > 525) {
-      $('#responsivepng').slideDown();
-      $('#bootstrappng').slideDown();
-      $('#jquerypng').slideDown();
+    if (window.pageYOffset > 850) {
+      $('.whiteSpace').hide();
     }
-
-    if (window.pageYOffset > 820) {
-      $('#gitpng').slideDown();
-      $('#joomlapng').slideDown();
-      $('#mysqlpng').slideDown();
-    }
-
-    if (window.pageYOffset > 1450) {
-      $('#debon').slideDown();
-      $('#template').slideDown();
-      $('#bartek').slideDown();
+    if (window.pageYOffset > 1250) {
+      $('#projectsRow').slideDown();
     }
   }
-
 
   $('#backToTop').click(function() {
     $('html, body').animate({
@@ -139,45 +201,41 @@ window.onload = function() {
     });
     $('#projectsMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=1704px'
+        scrollTop: '+=1450px'
       }, 1200);
     });
     $('#contactMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=2421px'
+        scrollTop: '+=2200px'
       }, 1200);
     });
   }
+
+
   // Project name and Project technologies
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    $('.ProjectTechnologies').show();
-    $('.projectName').show();
+    $('.projectDescription').show();
   } else {
-    $('.ProjectTechnologies').hide();
-    $('.projectName').hide();
+    $('.projectDescription').hide();
   }
 
-  $('.firstProject').mouseover(function() {
-    $('#debonName').show("fast", function() {});
-    $('#debonTechnologies').show("fast", function() {});
+  const arrayOfProjectsButtons = document.getElementById('projectsRow').getElementsByTagName('button')
+
+  $(arrayOfProjectsButtons[0]).mouseover(function() {
+    $('#debonDescription').show("fast", function() {});
   }).mouseout(function() {
-    $('#debonName').hide("fast", function() {});
-    $('#debonTechnologies').hide("fast", function() {});
+    $('#debonDescription').hide("fast", function() {});
   });
 
-  $('.secondProject').mouseover(function() {
-    $('#templateName').show("fast", function() {});
-    $('#templateTechnologies').show("fast", function() {});
+  $(arrayOfProjectsButtons[1]).mouseover(function() {
+    $('#futureProjectDescription').show("fast", function() {});
   }).mouseout(function() {
-    $('#templateName').hide("fast", function() {});
-    $('#templateTechnologies').hide("fast", function() {});
+    $('#futureProjectDescription').hide("fast", function() {});
   });
 
-  $('.thirdProject').mouseover(function() {
-    $('#kosiecName').show("fast", function() {});
-    $('#kosiecTechnologies').show("fast", function() {});
+  $(arrayOfProjectsButtons[2]).mouseover(function() {
+    $('#portfolioDescription').show("fast", function() {});
   }).mouseout(function() {
-    $('#kosiecName').hide("fast", function() {});
-    $('#kosiecTechnologies').hide("fast", function() {});
+    $('#portfolioDescription').hide("fast", function() {});
   });
 }
