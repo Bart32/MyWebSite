@@ -1,32 +1,39 @@
-body,
-html {
+/* line 1, style2.scss */
+html, body {
   overflow-x: hidden; }
 
+/* line 5, style2.scss */
 h1 {
   text-align: center;
   margin-bottom: 20px;
   font-family: 'Playfair Display', serif; }
 
-*,
-p {
+/* line 11, style2.scss */
+*, p {
   color: #484848; }
 
+/* line 15, style2.scss */
 a:hover {
   text-decoration: none; }
 
+/* line 19, style2.scss */
 .whiteSpace {
   width: 500px;
   height: 500px; }
 
 /* All Fixed item's */
+/* line 26, style2.scss */
 #webSite {
   display: none; }
 
+/* line 30, style2.scss */
 #loader {
   position: absolute;
   left: 50%;
   top: 50%;
   z-index: 1001;
+  width: 150px;
+  height: 150px;
   margin: -75px 0 0 -75px;
   border: 16px solid #f3f3f3;
   border-radius: 50%;
@@ -37,6 +44,7 @@ a:hover {
   animation: spin 2s linear infinite; }
 
 @media (max-width: 766px) {
+  /* line 48, style2.scss */
   #loader {
     left: 55%; } }
 @-webkit-keyframes spin {
@@ -49,19 +57,24 @@ a:hover {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+/* line 71, style2.scss */
 #LeftIcons i {
   position: fixed;
   left: 1%;
   z-index: 10;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all .2s ease-in-out;
   color: #2a2a2a; }
+
+/* line 80, style2.scss */
 #LeftIcons i:hover {
   transform: scale(1.1); }
+
 @media screen and (max-width: 766px) {
+  /* line 85, style2.scss */
   #LeftIcons i {
     display: none !important; } }
-
+/* line 90, style2.scss */
 #backToTop {
   width: 3%;
   position: fixed;
@@ -69,18 +82,22 @@ a:hover {
   right: 1%;
   z-index: 10;
   cursor: pointer;
-  transition: all 0.2s ease-in-out; }
+  transition: all .2s ease-in-out; }
 
+/* line 100, style2.scss */
 #backToTop:hover {
   transform: scale(1.1); }
 
 @media screen and (max-width: 766px) {
+  /* line 105, style2.scss */
   #backToTop {
     display: none !important; } }
+/* line 110, style2.scss */
 .btn {
   z-index: 10; }
 
 /* menu  */
+/* line 116, style2.scss */
 .navbar-nav a {
   color: white !important;
   font-size: 20px;
@@ -91,17 +108,20 @@ a:hover {
   white-space: nowrap; }
 
 @media (max-width: 766px) {
+  /* line 127, style2.scss */
   .navbar-nav a {
     position: relative;
-    margin-top: 0;
+    margin-top: 0px;
     width: 25%; } }
+/* line 134, style2.scss */
 .navbar-toggler {
   background: #545151; }
 
 @media (max-width: 766px) {
-  .navbar-toggler,
-  .navbar-toggler-icon {
+  /* line 139, style2.scss */
+  .navbar-toggler, .navbar-toggler-icon {
     background: #545151; } }
+/* line 144, style2.scss */
 .navbar-nav a:before {
   content: "";
   position: absolute;
@@ -117,16 +137,20 @@ a:hover {
   transition: all 0.3s ease-in-out 0s; }
 
 @media (max-width: 766px) {
+  /* line 160, style2.scss */
   .navbar-nav a:before {
     width: 90%; } }
+/* line 165, style2.scss */
 .navbar-nav a:hover:before {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1); }
 
+/* line 171, style2.scss */
 .navbar-nav a:hover {
   color: white !important; }
 
+/* line 175, style2.scss */
 header {
   position: relative;
   min-height: calc(100vh - 200px);
@@ -134,9 +158,11 @@ header {
   cursor: default !important; }
 
 @media (max-width: 766px) {
+  /* line 183, style2.scss */
   header {
     min-height: calc(75vh - 200px); } }
 /* video background */
+/* line 190, style2.scss */
 header h1 {
   text-align: center;
   padding: 1rem;
@@ -146,9 +172,11 @@ header h1 {
   color: white; }
 
 @media (max-width: 766px) {
+  /* line 200, style2.scss */
   header h1 {
     font-size: 20vw;
     margin-top: -13%; } }
+/* line 206, style2.scss */
 video {
   position: absolute;
   top: 0;
@@ -158,10 +186,11 @@ video {
   max-height: 100%;
   width: 100%;
   z-index: -1;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   object-fit: fill; }
 
+/* line 220, style2.scss */
 .languageChoice {
   padding: 1rem;
   text-align: center;
@@ -170,38 +199,46 @@ video {
   font-size: 20px;
   margin-left: 60%; }
 
+/* line 229, style2.scss */
 .polFlag {
   width: 35px;
   margin-right: 10px; }
 
 @media (max-width: 766px) {
+  /* line 235, style2.scss */
   .polFlag {
     width: 35px;
     position: fixed;
     top: 2%;
     right: 5%;
-    margin-right: 0; } }
+    margin-right: 0px; } }
+/* line 244, style2.scss */
 .gbFlag {
   width: 35px; }
 
 @media (max-width: 766px) {
+  /* line 249, style2.scss */
   .gbFlag {
     width: 35px;
     position: fixed;
     top: 8%;
     right: 5%; } }
 /* About me */
+/* line 259, style2.scss */
 .about {
   padding-bottom: 30px; }
 
+/* line 263, style2.scss */
 #about h1 {
   margin-top: 50px; }
 
 /* Skills */
+/* line 269, style2.scss */
 #skillsRow {
   margin-top: 4%;
   margin-bottom: 4%; }
 
+/* line 274, style2.scss */
 #skillsRow img {
   width: 103px;
   height: 103px;
@@ -210,31 +247,38 @@ video {
   cursor: pointer; }
 
 @media (max-width: 766px) {
+  /* line 283, style2.scss */
   #skillsRow img {
     width: 55%;
     height: auto;
     margin-left: 10%; } }
 @media (max-width: 766px) {
+  /* line 291, style2.scss */
   #skillsRow .col-md-4 {
     margin-left: 20%; } }
+/* line 296, style2.scss */
 .bottomSkills {
   margin-bottom: 12%; }
 
+/* line 300, style2.scss */
 .bottomSkills img {
   width: 90px !important;
   height: 90px !important;
   margin-left: 5% !important; }
 
 @media (max-width: 766px) {
+  /* line 307, style2.scss */
   .bottomSkills img {
     width: 45% !important;
     height: auto !important;
     margin-left: 15% !important; } }
+/* line 314, style2.scss */
 .dotsContainer {
   display: flex;
   flex-direction: row;
   min-width: 98px; }
 
+/* line 320, style2.scss */
 .dots {
   background-color: #c7ced6;
   position: relative;
@@ -244,14 +288,17 @@ video {
   margin: 0 0 0 5px; }
 
 @media (max-width: 766px) {
+  /* line 330, style2.scss */
   .dots {
     width: 8%;
     height: auto;
     padding-top: 7%;
     margin-left: 6%; } }
+/* line 338, style2.scss */
 .checked {
   background-color: black; }
 
+/* line 342, style2.scss */
 .skillDescription img {
   width: 60% !important;
   margin-top: 0 !important;
@@ -261,41 +308,50 @@ video {
   height: auto !important; }
 
 @media (max-width: 766px) {
+  /* line 352, style2.scss */
   .skillDescription img {
     width: 100%;
     height: auto;
     padding-top: 7%;
     margin-left: 10%; } }
+/* line 360, style2.scss */
 #descriptionText {
   margin-top: 5%;
   font-size: 1.45vw; }
 
 @media (max-width: 766px) {
+  /* line 366, style2.scss */
   #descriptionText {
     font-size: 20px;
     margin-bottom: 15%; } }
+/* line 372, style2.scss */
 .icons {
   padding-bottom: 50px; }
 
 /* Projects */
+/* line 378, style2.scss */
 #projectsRow {
   margin-bottom: 5%; }
 
+/* line 382, style2.scss */
 .shadows {
-  -webkit-box-shadow: 0 -9px 38px -36px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0 -9px 38px -36px rgba(0, 0, 0, 0.75);
-  box-shadow: 0 -9px 38px -36px rgba(0, 0, 0, 0.75); }
+  -webkit-box-shadow: 0px -9px 38px -36px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -9px 38px -36px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -9px 38px -36px rgba(0, 0, 0, 0.75); }
 
+/* line 388, style2.scss */
 #projectsRow img {
   margin-left: 13%;
   width: 75%;
   height: auto;
   margin-top: 10%; }
 
+/* line 395, style2.scss */
 .projectsHeader {
   margin-top: 4%;
   margin-bottom: 4%; }
 
+/* line 400, style2.scss */
 .projectName {
   position: absolute;
   left: 50%;
@@ -305,6 +361,7 @@ video {
   width: 50%;
   height: 21%; }
 
+/* line 410, style2.scss */
 .projectName p {
   font-size: 2vw;
   margin-left: 5%;
@@ -313,11 +370,14 @@ video {
   color: white; }
 
 @media (max-width: 766px) {
+  /* line 419, style2.scss */
   .wholeProject {
     margin-bottom: 20%; } }
 @media (max-width: 766px) {
+  /* line 425, style2.scss */
   .projectName p {
     font-size: 6vw; } }
+/* line 430, style2.scss */
 .ProjectTechnologies {
   position: absolute;
   left: 7%;
@@ -328,9 +388,11 @@ video {
   height: 26%; }
 
 @media (max-width: 766px) {
+  /* line 441, style2.scss */
   .ProjectTechnologies {
     height: 24%;
     bottom: -11%; } }
+/* line 447, style2.scss */
 .ProjectTechnologies i {
   font-size: 3vw;
   padding-top: 3%;
@@ -338,41 +400,50 @@ video {
   display: inline-block; }
 
 @media screen and (max-width: 767px) {
+  /* line 455, style2.scss */
   .ProjectTechnologies i {
     font-size: 9vw; } }
+/* line 460, style2.scss */
 .visitWebsiteButton {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 8%; }
 
+/* line 467, style2.scss */
 .visitWebsiteButton:hover {
   text-decoration: none; }
 
 /* Contact */
+/* line 473, style2.scss */
 #contact {
   margin-top: 4%; }
 
+/* line 477, style2.scss */
 .contactF {
   margin-top: 50px; }
 
+/* line 481, style2.scss */
 .wyslijWiad {
   background-color: #2a2a2a;
   color: white; }
 
+/* line 486, style2.scss */
 .wyslijWiad:hover {
   background-color: #cfcfcf;
   color: black; }
 
+/* line 491, style2.scss */
 .wyslijWiad:hover {
   -webkit-filter: brightness(50%);
   filter: brightness(50%); }
 
-.wyslijWiad.focus,
-.wyslijWiad:focus {
+/* line 496, style2.scss */
+.wyslijWiad.focus, .wyslijWiad:focus {
   box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25); }
 
 /* Text under headers */
+/* line 502, style2.scss */
 .text {
   text-align: center;
   font-size: 20px;
@@ -380,17 +451,20 @@ video {
   line-height: 2.2; }
 
 /* Footer */
+/* line 511, style2.scss */
 footer {
   margin-top: 75px;
   background-color: #2a2a2a; }
 
+/* line 516, style2.scss */
 footer p {
   color: white;
   font-size: 17px;
   text-align: Center; }
 
+/* line 522, style2.scss */
 .footer i {
   margin-left: 10px;
   color: white; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style2.css.map */

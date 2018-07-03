@@ -8,6 +8,19 @@
   width: device-width;
 }
 
+#wrapper {
+ color: green;
+}
+.texxt {
+ color: red;
+}
+#wrapper .texxt {
+ color: yellow;
+}
+html > body .texxt {
+ color: blue;
+}
+
 html {
   box-sizing: border-box;
   -ms-overflow-style: scrollbar;
