@@ -1,33 +1,32 @@
 window.onload = function() {
 
- // Turning off animations on phone
+  // Turning off animations on phone
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     $('.hiddenClass');
   } else {
     $('.hiddenClass').hide();
   }
 
-// LOADER
- function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("webSite").style.display = "block";
-}
-      setTimeout(showPage, 700);
+  // LOADER
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("webSite").style.display = "block";
+  }
+  setTimeout(showPage, 700);
 
 
   // ENG / PL
   $('#engButton').click(function() {
-    $('.menuItem, .textHeader, .text, .wyslijWiad,#projectInRealization').fadeOut(500, function() {
+    $('.menuItem, .text, .wyslijWiad, #projectInRealization').fadeOut(500, function() {
       $('#projectsMenu').html('Projects').fadeIn(500);
       $('#contactMenu').html('Contact').fadeIn(500);
       $('#aboutMenu').html('About me').fadeIn(500);
 
-      $("#about").html(" <h1> About me </h1><p class='text'> Hello, my name is Bartek. I'm an junior front-end developer. <br> At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks. <br> I would like to continue to gain valuable experience and develop my passion, what is creating websites. <br>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Techonolgies what I'm working with: </p>").fadeIn(500);
+      $("#about").html(" <h1> About me </h1><p class='text'> Hello, my name is Bartek. I'm an junior front-end developer. <br> At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks. <br> I would like to continue to gain valuable experience and develop my passion, what is creating websites. <br>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Technologies in which I feel best: </p>").fadeIn(500);
 
-      $('#alsoWorkingWith').html('<p class="text"><strong>I"m also using: </strong></p>').fadeIn(500);
       $('#projectInRealization').html("IN REALIZATION").fadeIn(500);
 
-      $("#projects").html(" <h1> Projects </h1><p class='text'> Below you can find a few of my realizations. <br> I can create templates and also integrate ready project with CMS. <br> So far, I have been working on projects with CMS Joomla, but I am open to new solutions. <br>At this moment I can be proud of one completed commercial project, but the next one is in realization. </p>").fadeIn(500);
+      $(".projectsHeader").html(" <h1> Projects </h1><p class='text'> Below you can find a few of my realizations. <br> I can create templates and also integrate ready project with CMS. <br> So far, I have been working on projects with CMS Joomla, but I am open to new solutions. <br>At this moment I can be proud of one completed commercial project, but the next one is in realization. </p>").fadeIn(500);
 
       $('#projectInRealization').html("IN REALIZATION").fadeIn(500);
       $('.wyslijWiad').html('Visit website').fadeIn(500);
@@ -42,17 +41,15 @@ window.onload = function() {
   });
   $('#plButton').click(function() {
 
-    $('.menuItem, .textHeader, .text, .wyslijWiad,#projectInRealization').fadeOut(500, function() {
+    $('.menuItem, .text, .wyslijWiad, #projectInRealization').fadeOut(500, function() {
       $('#projectsMenu').html('Projekty').fadeIn(500);
       $('#contactMenu').html('Kontakt').fadeIn(500);
       $('#aboutMenu').html('O mnie').fadeIn(500);
 
-      $("#about").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich pracuję to: </p>").fadeIn(500);
+      $("#about").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich czuję sie najlepiej: </p>").fadeIn(500);
 
-      $('#alsoWorkingWith').html('<p class="text"><strong>Pracuję także z: </strong></p>').fadeIn(500);
-      $('#projectInRealization').html("IN REALIZATION").fadeIn(500);
 
-      $("#projects").html(" <h1> Projekty </h1><p class='text'>Poniżej znajdziesz kilka projektów, nad którymi pracowałem. <br> Potrafię zarówno sam stworzyć szablon, jak i zintegrować gotowy projekt z systemem zarządzania treścią. <br> Do tej pory przy projektach pracowałem głównie z CMS Joomla, lecz jestem otwarty na nowe rozwiązania. <br>Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt jest już w realizacji. </p>").fadeIn(500);
+      $(".projectsHeader").html(" <h1> Projekty </h1><p class='text'>Poniżej znajdziesz kilka projektów, nad którymi pracowałem. <br> Potrafię zarówno sam stworzyć szablon, jak i zintegrować gotowy projekt z systemem zarządzania treścią. <br> Do tej pory przy projektach pracowałem głównie z CMS Joomla, lecz jestem otwarty na nowe rozwiązania. <br>Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt jest już w realizacji. </p>").fadeIn(500);
 
       $('#projectInRealization').html("W REALIZACJI").fadeIn(500);
       $('.wyslijWiad').html('Odwiedź witrynę').fadeIn(500);
@@ -69,24 +66,15 @@ window.onload = function() {
   // Loading images
   window.onscroll = function() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    if (window.pageYOffset < 50) {
-      $('.flags').show();
+      if (window.pageYOffset < 50) {
+        $('.flags').show();
+      } else {
+        $('.flags').hide();
+      }
     }
-    else {
-      $('.flags').hide();
-    }
-  }
 
-    if (window.pageYOffset > 250) {
-      $('#jspng').slideDown();
-      $('#descriptionText').slideDown();
-      $('#descriptionImg').slideDown();
-      $('#htmlpng').slideDown();
-      $('#csspng').slideDown();
-      $('#hiddenJS').slideDown();
-      $('#hiddenHTML').slideDown();
-      $('#hiddenCSS').slideDown();
-
+    if (window.pageYOffset > 180) {
+      $('#skillsRow').slideDown();
     }
 
     if (window.pageYOffset > 350) {
@@ -97,10 +85,11 @@ window.onload = function() {
       $('#LeftIcons').hide();
     }
 
-    if (window.pageYOffset > 1150) {
-      $('#debon').slideDown();
-      $('#template').slideDown();
-      $('#bartek').slideDown();
+    if (window.pageYOffset > 850) {
+      $('.whiteSpace').hide();
+    }
+    if (window.pageYOffset > 1200) {
+      $('#projectsRow').slideDown();
     }
   }
 
@@ -127,7 +116,8 @@ window.onload = function() {
         scrollTop: $('#contact').offset().top
       }, 1200);
     });
-  } else {
+  }
+  else {
     $('#aboutMenu').click(function() {
       $('html, body').animate({
         scrollTop: $('#about').offset().top
@@ -135,86 +125,83 @@ window.onload = function() {
     });
     $('#projectsMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=1750px'
+        scrollTop: '+=1450px'
       }, 1200);
     });
     $('#contactMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=2500px'
+        scrollTop: '+=2200px'
       }, 1200);
     });
   }
 
   // Skill's description
 
-    const skillImgSrc = [
-      'images/ikony/js.png',
-      'images/ikony/css.png',
-      'images/ikony/html.png',
-      'images/ikony/react.png',
-      'images/ikony/bootstrap.png',
-      'images/ikony/responsive.png',
-      'images/ikony/jquery.jpg',
-      'images/ikony/joomla.png',
-      'images/ikony/git.jpg'
-    ];
-    const skillTextDescription = [
-      "Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu. Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.",
-      "CSS ipsum ",
-      "HTML ipsum ipsum",
-      "Aktualnie jestem w trakcie nauki biblioteki React.js. Znam już podstawowe założenia oraz widze korzyści płynące z dzielenia kodu na moduły. Powoli zaczynam dostrzegać możliwości Reacta poznając innego jego funkcje. Jestem także w trakcie tworzenia projektu, który niedługo znajdzie się na moim githubie.",
-      "Framework Bootstrap głównie pomaga mi przy tworzeniu responsywności strony, czasami korzystam z innych jego elementów, takich jak gotowe menu, czy dobrze wystylizowane buttony.",
-      "Zawsze staram się, aby moje projekty wyglądały dobrze w każdej rozdzielczości, zarówno na szerokich monitorach, jak i na tabletach, na telefonach komórkowych kończąc.",
-      "Biblioteka jQuery znacznie przyśpiesza moją prace z javascriptem, niestety często kosztem wydajności strony. Do tej pory używałem głównie prostych funkcji, które pomagały mi uzyskiwać animacje na stronach. Cały czas poznaję możliwości tej biblioteki, po przez stosowanie jej w moich projektach.",
-      "Dwa projekty komercyjne, oraz kilka projektów niekomercyjnych, pozwoliły mi poznać CMS, jakim jest Joomla! Potrafie podpiąć pod Joomle gotowy szablon, tworząc włąsne moduły, jak i zaprojektować stronę od początku do samego końca.",
-      "System kontroli wersji GIT, pomaga mi w utrzymaniu mojego kodu. Poprzez dość częste commity, w razie problemu mogę cofnąć program do działającej wersji."
-    ]
-    const arrayOfSkillsImg = document.getElementById('arrayOfSkillsImg').getElementsByTagName('img');
-    var descriptionImg = $("#descriptionImg");
-    var descriptionText = $("#descriptionText");
-    for (var i = 0; i <= arrayOfSkillsImg.length-1; i++){
-      $(arrayOfSkillsImg[i]).click(function(){
-        var indexOfClickedElement = ( $(arrayOfSkillsImg).index(this) );
-        descriptionImg.fadeOut('fast', function(){
+  const skillImgSrc = [
+    'images/ikony/js.png',
+    'images/ikony/css.png',
+    'images/ikony/html.png',
+    'images/ikony/react.png',
+    'images/ikony/bootstrap.png',
+    'images/ikony/responsive.png',
+    'images/ikony/jquery.jpg',
+    'images/ikony/joomla.png',
+    'images/ikony/git.jpg'
+  ];
+  const skillTextDescription = [
+    "Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu. Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.",
+    "W CSS czuję się dobrze. Potrafie min. nadawać responsywnść elementom na stronie, manipulowac ich wyglądem z wykorzystaniem pesudoklas, tworzyć proste animacje z użyciem transition. Lubię nieszablonowe rozwiązania, praca z arkuszem stylów sprawia mi przyjemność.",
+    "W HTML poruszam się bardzo sprawnie, dobrze znam jego składnie, przez co praca w tej technologi idzie mi płynnie oraz bezproblemowo.",
+    "Aktualnie jestem w trakcie nauki biblioteki React.js. Znam już podstawowe założenia oraz widze korzyści płynące z dzielenia kodu na moduły. Powoli zaczynam dostrzegać możliwości Reacta poznając innego jego funkcje. Jestem także w trakcie tworzenia projektu, który niedługo znajdzie się na moim githubie.",
+    "Framework Bootstrap głównie pomaga mi przy tworzeniu responsywności strony, czasami korzystam z innych jego elementów, takich jak gotowe menu, czy gotowe buttony.",
+    "Zawsze staram się, aby moje projekty wyglądały dobrze w każdej rozdzielczości, zarówno na szerokich monitorach, tabletach, na telefonach komórkowych kończąc.",
+    "Biblioteka jQuery znacznie przyśpiesza moją prace z javascriptem. Rozumiem minusy związane z wydajnością strony podczas korzystania z tej biblioteki, dlatego staram się jej nie nadużywać. Do tej pory używałem głównie prostych funkcji, które pomagały mi uzyskiwać animacje na stronach. Cały czas poznaję możliwości jQuery, po przez wykorzystanie niektórych elementów w moich projektach.",
+    "Dwa projekty komercyjne, oraz kilka projektów niekomercyjnych, pozwoliły mi poznać CMS, jakim jest Joomla! Potrafie podpiąć pod Joomle gotowy szablon, tworzyć włąsne moduły, oraz zaprojektować stronę od początku do samego końca.",
+    "System kontroli wersji GIT, służy mi głównie do dziela się moim kodem z innymi. Pozwala mi także, w razie problemów, wrócić do poprzedniej wersji mojego projektu"
+  ]
+  const arrayOfSkillsImg = document.getElementById('arrayOfSkillsImg').getElementsByTagName('img');
+  var descriptionImg = $("#descriptionImg");
+  var descriptionText = $("#descriptionText");
+  for (var i = 0; i <= arrayOfSkillsImg.length - 1; i++) {
+    $(arrayOfSkillsImg[i]).click(function() {
+      var indexOfClickedElement = ($(arrayOfSkillsImg).index(this));
+      descriptionImg.fadeOut('fast', function() {
         descriptionImg.attr('src', skillImgSrc[indexOfClickedElement]);
         descriptionText.text(skillTextDescription[indexOfClickedElement]);
         descriptionImg.fadeIn('fast');
-        });
-});
-};
+      });
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $('html, body').animate({
+          scrollTop: $('#descriptionImg').offset().top
+        }, 1200);
+      }
+    });
+  };
 
   // Project name and Project technologies
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    $('.ProjectTechnologies').show();
-    $('.projectName').show();
+    $('.projectDescription').show();
   } else {
-    $('.ProjectTechnologies').hide();
-    $('.projectName').hide();
+    $('.projectDescription').hide();
   }
 
-   const arrayOfProjectsButtons = document.getElementById('projectsRow').getElementsByTagName('button')
+  const arrayOfProjectsButtons = document.getElementById('projectsRow').getElementsByTagName('button')
 
   $(arrayOfProjectsButtons[0]).mouseover(function() {
-    $('#debonName').show("fast", function() {});
-    $('#debonTechnologies').show("fast", function() {});
+    $('#debonDescription').show("fast", function() {});
   }).mouseout(function() {
-    $('#debonName').hide("fast", function() {});
-    $('#debonTechnologies').hide("fast", function() {});
+    $('#debonDescription').hide("fast", function() {});
   });
 
   $(arrayOfProjectsButtons[1]).mouseover(function() {
-    $('#templateName').show("fast", function() {});
-    $('#templateTechnologies').show("fast", function() {});
+    $('#futureProjectDescription').show("fast", function() {});
   }).mouseout(function() {
-    $('#templateName').hide("fast", function() {});
-    $('#templateTechnologies').hide("fast", function() {});
+    $('#futureProjectDescription').hide("fast", function() {});
   });
 
   $(arrayOfProjectsButtons[2]).mouseover(function() {
-    $('#kosiecName').show("fast", function() {});
-    $('#kosiecTechnologies').show("fast", function() {});
+    $('#portfolioDescription').show("fast", function() {});
   }).mouseout(function() {
-    $('#kosiecName').hide("fast", function() {});
-    $('#kosiecTechnologies').hide("fast", function() {});
+    $('#portfolioDescription').hide("fast", function() {});
   });
 }

@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
   <link href="css/fonts.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -17,12 +15,12 @@
   <script type="text/javascript" src="js/jQuery.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/skrypt.js"></script>
-
   <title>Bartosz Kosiec</title>
 </head>
 
 <body>
   <!-- FIXED ELEMENTS -->
+
   <div id="loader"></div>
   <div id="webSite">
     <img src="images/arrow.png" class="arrow hiddenClass" id="backToTop">
@@ -31,11 +29,11 @@
       <a href="https://www.linkedin.com/in/bartosz-kosiec-748301155/" target="_blank"><i class="fab fa-linkedin-in fa-3x fontIcons" style="top:12%;"></i> </a>
       <a href="mailto:adres bartosz.kosiec@gmail.com"><i class="fas fa-at fa-3x fontIcons" style="top:20%;"></i> </a>
     </div>
-
-    <header class="header">
+    <header>
       <div class="container-fluid">
         <div class="row">
           <!-- MENU -->
+
           <div class="col-md-4">
             <nav class="navbar navbar-expand-lg navbar-light">
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +50,6 @@
           </div>
           <!-- LANGUAGE CHOICE -->
 
-
           <div class="col-md-4"></div>
           <div class="col-md-4">
             <p class="languageChoice">
@@ -67,7 +64,6 @@
             <p class="myName">Bartosz Kosiec</p>
           </div>
         </div>
-
         <video class="videoBg" autoplay="autoplay" poster="images/Love-Coding.jpg">
       <source src="video/Love-Coding.mp4" type="video/webm" / style="width:100%; height:100%;">
       <source src="video/Love-Coding.mp4" type="video/mp4" />
@@ -76,22 +72,23 @@
     <div class="row">
       <!-- ABOUT ME -->
 
-      <div class="col-md-12 textHeader" id="about">
+      <div class="col-md-12" id="about">
         <h1> O mnie </h1>
         <p class="text">Cześć, jestem Bartek. Początkujący front-end developer.
           <br>Na ten moment działam jako freelancer, realizujac różnego rodzaju zlecenia.
           <br>Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijac swoją pasję, jaką jest tworzenie stron internetowych.
           <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich czuję sie najlepiej: </p>
       </div>
-      </div>
-      <!-- SKILLS -->
-    <div class="row skills">
+    </div>
+    <!-- SKILLS -->
+
+    <div class="row hiddenClass" id="skillsRow">
       <div class="col-md-1"></div>
       <div class="col-md-5" id="arrayOfSkillsImg">
         <div class="row">
           <div class="col-md-4">
-            <img src="images/ikony/js.png" class="hiddenClass" id="jspng">
-            <div class="dotsContainer hiddenClass" id="hiddenJS">
+            <img src="images/ikony/js.png" id="jspng">
+            <div class="dotsContainer">
               <div class="dots checked"></div>
               <div class="dots checked"></div>
               <div class="dots checked"></div>
@@ -99,8 +96,8 @@
               <div class="dots "></div>
             </div>
           </div>
-          <div class="col-md-4"> <img src="images/ikony/css.png" class="hiddenClass" id="csspng">
-            <div class="dotsContainer hiddenClass" id="hiddenCSS">
+          <div class="col-md-4"> <img src="images/ikony/css.png" id="csspng">
+            <div class="dotsContainer">
               <div class="dots checked"></div>
               <div class="dots checked"></div>
               <div class="dots checked"></div>
@@ -108,8 +105,8 @@
               <div class="dots"></div>
             </div>
           </div>
-          <div class="col-md-4"> <img src="images/ikony/html.png" class="hiddenClass" id="htmlpng">
-            <div class="dotsContainer hiddenClass" id="hiddenHTML">
+          <div class="col-md-4"> <img src="images/ikony/html.png">
+            <div class="dotsContainer">
               <div class="dots checked"></div>
               <div class="dots checked"></div>
               <div class="dots checked"></div>
@@ -119,7 +116,6 @@
           </div>
         </div>
         <div class="row">
-
           <div class="col-md-4"><img src="images/ikony/react.png">
             <div class="dotsContainer">
               <div class="dots checked"></div>
@@ -149,7 +145,6 @@
           </div>
         </div>
         <div class="row bottomSkills">
-
           <div class="col-md-4"><img src="images/ikony/jquery.jpg">
             <div class="dotsContainer">
               <div class="dots checked"></div>
@@ -183,10 +178,11 @@
       <div class="col-md-5 skillDescription">
         <div class="row">
           <div class="col-md-12">
-            <img src="images/ikony/js.png" class ="hiddenClass" id="descriptionImg">
+            <img src="images/ikony/js.png" id="descriptionImg">
           </div>
           <div class="col-md-12">
-            <p class="text hiddenClass" id="descriptionText">Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu. Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.</p>
+            <p class="text" id="descriptionText">Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu.
+              Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.</p>
           </div>
         </div>
       </div>
@@ -194,8 +190,9 @@
 
     <!-- PROJECTS -->
 
-    <div class="row shadows" id="projectsRow">
-      <div class="col-md-12 textHeader projectsHeader">
+    <div class="whiteSpace"></div>
+    <div class="row shadows">
+      <div class="col-md-12 projectsHeader">
         <h1> Projekty </h1>
         <p class="text">Poniżej znajdziesz kilka projektów, nad którymi pracowałem.
           <br>Potrafie zarówno sam stworzyć szablon lub zintegrować gotowy projekt z systemem zarządzania treścią.
@@ -203,20 +200,23 @@
           <br> Na ten moment mogę pochwalić się jednym gotowym projektem komercyjnym, kolejny projekt jest juz w realizacji.
         </p>
       </div>
-
-      <div class="col-md-4" style="padding-bottom: 50px; padding-top: 7%;">
+    </div>
+    <div class="row hiddenClass" id="projectsRow">
+      <div class="col-md-4 wholeProject">
         <div class="col-md-12">
-          <div class="projectName" id="debonName">
-            <p class="projectText"> DEBON </p>
-          </div>
-          <img src="images/projects/debonSmall.png" alt="" class="projects hiddenClass" id="debon">
-          <div class="ProjectTechnologies" id="debonTechnologies">
-            <div class="col-md-12">
-              <i class="devicon-html5-plain-wordmark" style="margin-left: -5%;"></i>
-              <i class="devicon-css3-plain-wordmark"></i>
-              <i class="devicon-javascript-plain"></i>
-              <i class="devicon-jquery-plain-wordmark"></i>
-              <i class="fab fa-joomla  projectIcons"></i>
+          <img src="images/projects/debonSmall.png" id="debon">
+          <div class="projectDescription" id="debonDescription">
+            <div class="projectName">
+              <p> DEBON </p>
+            </div>
+            <div class="ProjectTechnologies">
+              <div class="col-md-12">
+                <i class="devicon-html5-plain-wordmark" style="margin-left: -5%;"></i>
+                <i class="devicon-css3-plain-wordmark"></i>
+                <i class="devicon-javascript-plain"></i>
+                <i class="devicon-jquery-plain-wordmark"></i>
+                <i class="fab fa-joomla  projectIcons"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -224,18 +224,19 @@
           <a target="_blank" href="http://debon.com.pl/" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad" >Odwiedź witrynę </button> </a>
         </div>
       </div>
-
-      <div class="col-md-4" style="padding-top: 7%;">
+      <div class="col-md-4 wholeProject">
         <div class="col-md-12">
-          <div class="projectName" id="templateName">
-            <p class="projectText" id="projectInRealization"> W REALIZACJI </p>
-          </div>
-          <img src="images/projects/templateSmall.png" alt="" class="projects hiddenClass" id="template" />
-          <div class="ProjectTechnologies" id="templateTechnologies">
-            <div class="col-md-12 ">
-              <i class="devicon-html5-plain-wordmark" style="margin-left: -5%;"></i>
-              <i class="devicon-css3-plain-wordmark"></i>
-              <i class="fab fa-joomla"></i>
+          <img src="images/projects/templateSmall.png" id="template" />
+          <div class="projectDescription" id="futureProjectDescription">
+            <div class="projectName">
+              <p id="projectInRealization"> W REALIZACJI </p>
+            </div>
+            <div class="ProjectTechnologies">
+              <div class="col-md-12 ">
+                <i class="devicon-html5-plain-wordmark" style="margin-left: -5%;"></i>
+                <i class="devicon-css3-plain-wordmark"></i>
+                <i class="fab fa-joomla"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -243,20 +244,21 @@
           <a target="_blank" href="http://serwer1654807.home.pl/Bartek/budowlana/" class="visitWebsiteButton"> <button type="submit" class="btn wyslijWiad">Odwiedź witrynę </button> </a>
         </div>
       </div>
-
-      <div class="col-md-4" style="padding-bottom: 50px; padding-top: 7%;">
+      <div class="col-md-4 wholeProject">
         <div class="col-md-12">
-          <div class="projectName" id="kosiecName">
-            <p class="projectText"> PORTFOLIO </p>
-          </div>
-          <img src="images/projects/bartekSmall.png" alt="" class="projects hiddenClass" id="bartek">
-          <div class="ProjectTechnologies" id="kosiecTechnologies">
-            <div class="col-md-12">
-              <i class="devicon-html5-plain-wordmark" style="margin-left: -5%;"></i>
-              <i class="devicon-css3-plain-wordmark"></i>
-              <i class="devicon-javascript-plain"></i>
-              <i class="devicon-jquery-plain-wordmark"></i>
-              <i class="devicon-github-plain-wordmark"></i>
+          <img src="images/projects/bartekSmall.png" id="bartek">
+          <div class="projectDescription" id="portfolioDescription">
+            <div class="projectName">
+              <p> PORTFOLIO </p>
+            </div>
+            <div class="ProjectTechnologies">
+              <div class="col-md-12">
+                <i class="devicon-html5-plain-wordmark" style="margin-left: -5%;"></i>
+                <i class="devicon-css3-plain-wordmark"></i>
+                <i class="devicon-javascript-plain"></i>
+                <i class="devicon-jquery-plain-wordmark"></i>
+                <i class="devicon-github-plain-wordmark"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -266,14 +268,13 @@
       </div>
     </div>
     <!-- CONTACT -->
-    <div class="row shadows" style="padding-top:4%;">
-      <div class="col-md-12 textHeader" id="contact">
+
+    <div class="row shadows">
+      <div class="col-md-12" id="contact">
         <h1> Kontakt </h1>
         <p class="text" id="contact1paraghraph">Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?
           <br> Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href="CV/cvPL.pdf" target="_blank">CV.</a> Do usłyszenia! </p>
       </div>
-    </div>
-    <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8">
         <form class="form-horizontal contactF" action="php/kontakt.php" method="post" id="ContactForm" name=c ontactFormName>
@@ -294,7 +295,7 @@
     <!-- FOOTER -->
 
     <footer>
-      <hr>
+      <hr/>
       <div class="row">
         <div class="col-md-12">
           <ul class="list-unstyled list-inline text-center">
@@ -311,5 +312,4 @@
     </div>
   </div>
 </body>
-
 </html>
