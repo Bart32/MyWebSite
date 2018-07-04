@@ -82,7 +82,7 @@ window.onload = function() {
     skillTextDescription = skillTextDescriptionENG;
     descriptionImg.attr('src', skillImgSrc[0]);
 
-    $('.menuItem, #about').fadeOut(500, function() {
+    $('#projectsMenu,#contactMenu,#aboutMenu, #about').fadeOut(500, function() {
       $('#projectsMenu').html('Projects').fadeIn(500);
       $('#contactMenu').html('Contact').fadeIn(500);
       $('#aboutMenu').html('About me').fadeIn(500);
@@ -193,7 +193,8 @@ window.onload = function() {
         scrollTop: $('#contact').offset().top
       }, 1200);
     });
-  } else {
+  }
+  else {
     $('#aboutMenu').click(function() {
       $('html, body').animate({
         scrollTop: $('#about').offset().top
@@ -201,12 +202,12 @@ window.onload = function() {
     });
     $('#projectsMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=1450px'
+        scrollTop: '+=1500px'
       }, 1200);
     });
     $('#contactMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=2200px'
+        scrollTop: '+=2250px'
       }, 1200);
     });
   }

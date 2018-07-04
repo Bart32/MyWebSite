@@ -9,7 +9,6 @@ h1 {
   font-family: 'Playfair Display', serif;
 }
 
-*,
 p {
   color: #484848;
 }
@@ -427,14 +426,14 @@ a:hover {
     }
   }
 
-  .visitWebsiteButton {
+  .wholeProject a {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 8%;
   }
 
-  .visitWebsiteButton:hover {
+  .wholeProject a:hover {
     text-decoration: none;
   }
   /* Contact */
@@ -484,7 +483,7 @@ a:hover {
     text-align: Center;
   }
 
-  .footer i {
+  footer i {
     margin-left: 10px;
     color: white;
   }
