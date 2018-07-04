@@ -87,7 +87,7 @@ window.onload = function() {
       $('#contactMenu').html('Contact').fadeIn(500);
       $('#aboutMenu').html('About me').fadeIn(500);
 
-      $("#about").html(" <h1> About me </h1><p class='text'> Hello, my name is Bartek. I'm an junior front-end developer. <br> At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks. <br> I would like to continue to gain valuable experience and develop my passion, what is creating websites. <br>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Technologies in which I feel best: </p>").fadeIn(500);
+      $("#about").html(" <h1> About me </h1><p class='text'> Hello, my name is Bartek. I'm an junior front-end developer. <br> At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks. <br> I would like to continue to gain valuable experience and develop my passion, what is creating websites. <br>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Technologies in which I feel best:  <br> (Click icon for more) </p>").fadeIn(500);
 
       descriptionText.html("I devote a lot of time to learning Javascript. I believe that you should learn this language from scratch in order to better understand what happens when using different libraries or frameworks. I always try to find the most optimal solution to the problem. I have already created a few projects, some of them can be found on my github.");
 
@@ -118,7 +118,7 @@ window.onload = function() {
       $('#contactMenu').html('Kontakt').fadeIn(500);
       $('#aboutMenu').html('O mnie').fadeIn(500);
 
-      $("#about").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich czuję sie najlepiej: </p>").fadeIn(500);
+      $("#about").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich czuję się najlepiej: <br> (Kliknij ikonę po więcej) </p>").fadeIn(500);
 
       descriptionText.html(" Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu. Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.");
 
@@ -143,10 +143,10 @@ window.onload = function() {
   // Loading images
   window.onscroll = function() {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      if (window.pageYOffset < 50) {
-        $('.flags').show();
+      if (window.pageYOffset < 150) {
+        $('.languageChoice').show();
       } else {
-        $('.flags').hide();
+        $('.languageChoice').hide();
       }
     }
 
