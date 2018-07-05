@@ -93,7 +93,8 @@ a:hover {
   margin-top: 6%;
   position: relative;
   font-family: "Playfair Display", serif;
-  white-space: nowrap; }
+  white-space: nowrap;
+  text-align: center; }
   .navbar-nav a:hover {
     color: white !important; }
   .navbar-nav a:before {
@@ -137,7 +138,6 @@ header {
     header {
       min-height: calc(75vh - 200px); } }
   header h1 {
-    text-align: center;
     padding: 1rem;
     font-family: 'Amatic SC';
     font-size: 9vw;
@@ -188,6 +188,9 @@ video {
   margin-top: 50px; }
 
 /* Skills */
+#arrayOfSkillsImg {
+  padding-bottom: 10%; }
+
 #skillsRow {
   margin-top: 4%;
   margin-bottom: 4%; }
@@ -222,7 +225,7 @@ video {
   flex-direction: row;
   min-width: 98px; }
 
-.dots {
+.dots, .dotsChecked {
   background-color: #c7ced6;
   position: relative;
   width: 15px;
@@ -230,13 +233,13 @@ video {
   border-radius: 50%;
   margin: 0 0 0 5px; }
   @media (max-width: 768px) {
-    .dots {
+    .dots, .dotsChecked {
       width: 8%;
       height: auto;
       padding-top: 7%;
       margin-left: 6%; } }
 
-.checked {
+.dotsChecked {
   background-color: black; }
 
 .skillDescription img {

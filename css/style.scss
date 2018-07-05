@@ -130,6 +130,7 @@ a:hover {
     position: relative;
     font-family: $menu-and-headers-font;
     white-space: nowrap;
+    text-align: center;
 
     &:hover {
       color: white !important;
@@ -190,7 +191,6 @@ header {
   }
 
   h1 {
-    text-align: center;
     padding: 1rem;
     font-family: 'Amatic SC';
     font-size: 9vw;
@@ -257,7 +257,9 @@ video {
   margin-top: 50px;
 }
 /* Skills */
-
+#arrayOfSkillsImg{
+  padding-bottom:10%;
+}
 #skillsRow {
   margin-top: 4%;
   margin-bottom: 4%;
@@ -316,7 +318,8 @@ video {
   }
 }
 
-.checked {
+.dotsChecked {
+  @extend .dots;
   background-color: black;
 }
 

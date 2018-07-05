@@ -24,7 +24,7 @@ window.onload = function() {
     'images/ikony/bootstrap.png',
     'images/ikony/responsive.png',
     'images/ikony/jquery.jpg',
-    'images/ikony/joomla.png',
+    'images/ikony/sass.png',
     'images/ikony/git.jpg'
   ];
   const skillTextDescriptionPL = [
@@ -35,7 +35,7 @@ window.onload = function() {
     "Framework Bootstrap głównie pomaga mi przy tworzeniu responsywności strony, czasami korzystam z innych jego elementów, takich jak gotowe menu, czy gotowe buttony.",
     "Zawsze staram się, aby moje projekty wyglądały dobrze w każdej rozdzielczości, zarówno na szerokich monitorach, tabletach, na telefonach komórkowych kończąc.",
     "Biblioteka jQuery znacznie przyśpiesza moją prace z javascriptem. Rozumiem minusy związane z wydajnością strony podczas korzystania z tej biblioteki, dlatego staram się jej nie nadużywać. Do tej pory używałem głównie prostych funkcji, które pomagały mi uzyskiwać animacje na stronach. Cały czas poznaję możliwości jQuery, po przez wykorzystanie niektórych elementów w moich projektach.",
-    "Dwa projekty komercyjne, oraz kilka projektów niekomercyjnych, pozwoliły mi poznać CMS, jakim jest Joomla! Potrafie podpiąć pod Joomle gotowy szablon, tworzyć włąsne moduły, oraz zaprojektować stronę od początku do samego końca.",
+    "Preprocesor Sass to świetne narzędzie,znacznie przyśpieszające prace z CSS. Z powodzeniem używam takich elementów jak zmienne, mixiny, operatory czy funkcje.",
     "System kontroli wersji GIT, służy mi głównie do dziela się moim kodem z innymi. Pozwala mi także, w razie problemów, wrócić do poprzedniej wersji mojego projektu"
   ]
   const skillTextDescriptionENG = [
@@ -46,7 +46,7 @@ window.onload = function() {
     "The Bootstrap framework mainly helps me make the website responsive, sometimes I'm also use other elements, such as a ready menu or ready buttons.",
     "I always try to make my projects look good in every resolution, both on wide monitors, tablets and on mobile phones.",
     "jQuery library accelerates my work with Javascript. I know cons related to performance website when using this library, so I try not to abuse it. So far, I've used mainly simple functions that helped me get animations on pages. I learn jQuery all the time, by using some elements in my projects.",
-    "Two commercial projects and  a few non-commercial projects, let me get to know CMS, which is Joomla! I can connect a ready template to Joomla, create my own modules and make a project of website from begging to end.",
+    "Sass preprocessor is a great tool for accelerating work with CSS. I successfully use elements such as variables, mixins, operators and functions.",
     "GIT version control system , is mainly used to share my code with others. It also allows me to return to the previous version of my project in case of any problem"
   ]
 
@@ -113,12 +113,12 @@ window.onload = function() {
     skillTextDescription = skillTextDescriptionPL;
     descriptionImg.attr('src', skillImgSrc[0]);
 
-    $('.menuItem, #about').fadeOut(500, function() {
+    $('#projectsMenu,#contactMenu,#aboutMenu, #about').fadeOut(500, function() {
       $('#projectsMenu').html('Projekty').fadeIn(500);
       $('#contactMenu').html('Kontakt').fadeIn(500);
       $('#aboutMenu').html('O mnie').fadeIn(500);
 
-      $("#about").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich czuję się najlepiej: <br> (Kliknij ikonę po więcej) </p>").fadeIn(500);
+      $("#about").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich czuję się najlepiej: <br> (Kliknij w ikonę po więcej) </p>").fadeIn(500);
 
       descriptionText.html(" Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu. Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.");
 
@@ -202,12 +202,12 @@ window.onload = function() {
     });
     $('#projectsMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=1500px'
+        scrollTop: '+=1580px'
       }, 1200);
     });
     $('#contactMenu').click(function() {
       $('html, body').animate({
-        scrollTop: '+=2250px'
+        scrollTop: '+=2325px'
       }, 1200);
     });
   }
