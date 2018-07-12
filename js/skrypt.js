@@ -73,7 +73,7 @@ window.onload = function() {
   // ENG / PL
   const projectsHeader = document.getElementsByClassName('projectsHeader');
   const wyslijWiad = document.getElementsByClassName('wyslijWiad');
-  const contact = document.getElementById('contact');
+  const contact = document.getElementById('contactMenuScroll');
   const messageSend = document.getElementById('messageSend');
   const projectInRealization = document.getElementById('projectInRealization');
 
@@ -82,12 +82,12 @@ window.onload = function() {
     skillTextDescription = skillTextDescriptionENG;
     descriptionImg.attr('src', skillImgSrc[0]);
 
-    $('#projectsMenu,#contactMenu,#aboutMenu, #about').fadeOut(500, function() {
+    $('#projectsMenu,#contactMenu,#aboutMenu, #aboutMenuScroll').fadeOut(500, function() {
       $('#projectsMenu').html('Projects').fadeIn(500);
       $('#contactMenu').html('Contact').fadeIn(500);
       $('#aboutMenu').html('About me').fadeIn(500);
 
-      $("#about").html(" <h1> About me </h1><p class='text'> Hello, my name is Bartek. I'm an junior front-end developer. <br> At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks. <br> I would like to continue to gain valuable experience and develop my passion, what is creating websites. <br>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Technologies in which I feel best:  <br> (Click icon for more) </p>").fadeIn(500);
+      $("#aboutMenuScroll").html(" <h1> About me </h1><p class='text'> Hello, my name is Bartek. I'm an junior front-end developer. <br> At this moment, I'm working as a freelancer, accomplishing the miscellaneous tasks. <br> I would like to continue to gain valuable experience and develop my passion, what is creating websites. <br>I'm looking for job as <strong> junior front-end developer </strong> or <strong>junior web-developer. </strong>Technologies in which I feel best:  <br> (Click icon for more) </p>").fadeIn(500);
 
       descriptionText.html("I devote a lot of time to learning Javascript. I believe that you should learn this language from scratch in order to better understand what happens when using different libraries or frameworks. I always try to find the most optimal solution to the problem. I have already created a few projects, some of them can be found on my github.");
 
@@ -113,12 +113,12 @@ window.onload = function() {
     skillTextDescription = skillTextDescriptionPL;
     descriptionImg.attr('src', skillImgSrc[0]);
 
-    $('#projectsMenu,#contactMenu,#aboutMenu, #about').fadeOut(500, function() {
+    $('#projectsMenu,#contactMenu,#aboutMenu, #aboutMenuScroll').fadeOut(500, function() {
       $('#projectsMenu').html('Projekty').fadeIn(500);
       $('#contactMenu').html('Kontakt').fadeIn(500);
       $('#aboutMenu').html('O mnie').fadeIn(500);
 
-      $("#about").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich czuję się najlepiej: <br> (Kliknij w ikonę po więcej) </p>").fadeIn(500);
+      $("#aboutMenuScroll").html(" <h1> O mnie </h1><p class='text'> Cześć, jestem Bartek. Początkujący front-end developer. <br> Na ten moment działam jako freelancer, realizując różnego rodzaju zlecenia. <br> Chciałbym dalej zdobywać cenne doświadczenie oraz rozwijać swoją pasję, jaką jest tworzenie stron internetowych. <br>Poszukuję stałej pracy, jako <strong> junior front-end developer </strong> lub <strong>junior web-developer. </strong>Technologie w jakich czuję się najlepiej: <br> (Kliknij w ikonę po więcej) </p>").fadeIn(500);
 
       descriptionText.html(" Na nauke Javascript poświęcam dużo czasu. Uważam, że należy poznać ten język od podstaw, aby lepiej rozumieć, co dzieje się podczas używania róznych bibliotek czy frameworków. Zawsze staram się znaleźć najoptymalniejsze rozwiązanie problemu. Stworzyłem juz kilka projektów, częsć z nich mozna znaleź na moim githubie.");
 
@@ -150,8 +150,9 @@ window.onload = function() {
       }
     }
 
-    if (window.pageYOffset > 180) {
-      $('#skillsRow').slideDown();
+    if (window.pageYOffset > 500) {
+      $('#arrayOfSkillsImg').slideDown();
+      $('.skillDescription').slideDown();
     }
 
     if (window.pageYOffset > 350) {
@@ -161,12 +162,8 @@ window.onload = function() {
       $('#backToTop').hide();
       $('#LeftIcons').hide();
     }
-
-    if (window.pageYOffset > 850) {
-      $('.whiteSpace').hide();
-    }
-    if (window.pageYOffset > 1250) {
-      $('#projectsRow').slideDown();
+    if (window.pageYOffset > 1500) {
+      $('.wholeProject').slideDown();
     }
   }
 
@@ -177,42 +174,17 @@ window.onload = function() {
   });
 
   // Menu
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    $('#aboutMenu').click(function() {
-      $('html, body').animate({
-        scrollTop: $('#about').offset().top
-      }, 1200);
-    });
-    $('#projectsMenu').click(function() {
-      $('html, body').animate({
-        scrollTop: $('#projects').offset().top
-      }, 1200);
-    });
-    $('#contactMenu').click(function() {
-      $('html, body').animate({
-        scrollTop: $('#contact').offset().top
-      }, 1200);
-    });
-  }
-  else {
-    $('#aboutMenu').click(function() {
-      $('html, body').animate({
-        scrollTop: $('#about').offset().top
-      }, 1200);
-    });
-    $('#projectsMenu').click(function() {
-      $('html, body').animate({
-        scrollTop: '+=1580px'
-      }, 1200);
-    });
-    $('#contactMenu').click(function() {
-      $('html, body').animate({
-        scrollTop: '+=2325px'
-      }, 1200);
-    });
-  }
 
-
+  $('nav a').on('click', function (e) {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      $('#navbarNavAltMarkup').attr("class", 'navbar-collapse collapse');
+    } 
+    e.preventDefault();
+    $('html, body').animate({
+       scrollTop: $('#' + this.id + "Scroll").offset().top
+    }, 1200);
+ });
+  
   // Project name and Project technologies
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     $('.projectDescription').show();

@@ -184,7 +184,7 @@ video {
   object-fit: fill; }
 
 /* About me */
-#about h1 {
+#aboutMenuScroll h1 {
   margin-top: 50px; }
 
 /* Skills */
@@ -193,7 +193,8 @@ video {
 
 #skillsRow {
   margin-top: 4%;
-  margin-bottom: 4%; }
+  min-width: 1px;
+  min-height: 50vw; }
   #skillsRow img {
     width: 103px;
     height: 103px;
@@ -258,7 +259,7 @@ video {
 
 #descriptionText {
   margin-top: 5%;
-  font-size: 1.45vw; }
+  font-size: 3vmin; }
   @media (max-width: 768px) {
     #descriptionText {
       font-size: 20px;
@@ -276,15 +277,20 @@ video {
   -moz-box-shadow: 0 -9px 38px -36px rgba(0, 0, 0, 0.75);
   box-shadow: 0 -9px 38px -36px rgba(0, 0, 0, 0.75); }
 
-#projectsRow img {
-  margin-left: 13%;
-  width: 75%;
-  height: auto;
-  margin-top: 10%; }
+#projectsRow {
+  min-height: 23vw; }
+  #projectsRow img {
+    margin-left: 13%;
+    width: 75%;
+    height: auto;
+    margin-top: 10%; }
 
 .projectsHeader {
   margin-top: 4%;
   margin-bottom: 4%; }
+  @media (max-width: 768px) {
+    .projectsHeader {
+      margin-top: 10%; } }
 
 .projectName {
   position: absolute;
@@ -300,16 +306,16 @@ video {
     font-family: 'Oswald', sans-serif;
     z-index: 10;
     color: white; }
-  @media (max-width: 768px) {
-    .projectName p {
-      font-size: 6vw; } }
+    @media (max-width: 768px) {
+      .projectName p {
+        font-size: 6vw; } }
 
 .wholeProject a {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 8%; }
-.wholeProject a:hover {
+.wholeProject:hover {
   text-decoration: none; }
 @media (max-width: 768px) {
   .wholeProject {
@@ -338,8 +344,11 @@ video {
     margin-left: -5%; }
 
 /* Contact */
-#contact {
+#contactMenuScroll {
   margin-top: 4%; }
+  @media (max-width: 768px) {
+    #contactMenuScroll {
+      margin-top: 10%; } }
 
 .contactF {
   margin-top: 50px; }

@@ -253,7 +253,7 @@ video {
 }
 /* About me */
 
-#about h1 {
+#aboutMenuScroll h1 {
   margin-top: 50px;
 }
 /* Skills */
@@ -262,7 +262,8 @@ video {
 }
 #skillsRow {
   margin-top: 4%;
-  margin-bottom: 4%;
+  min-width:1px;
+  min-height:50vw;
 
   img {
     @include size(103px, 103px);
@@ -342,7 +343,7 @@ video {
 
 #descriptionText {
   margin-top: 5%;
-  font-size: 1.45vw;
+  font-size: 3vmin;
   @media #{$phone} {
     & {
       font-size: 20px;
@@ -366,15 +367,24 @@ video {
   box-shadow: $shadow;
 }
 
-#projectsRow img {
-  margin-left: 13%;
-  @include size(75%, auto);
-  margin-top: 10%;
+#projectsRow{
+  min-height:23vw;
+  img {
+    margin-left: 13%;
+    @include size(75%, auto);
+    margin-top: 10%;
+  }
 }
 
-.projectsHeader {
+.projectsHeader{
   margin-top: 4%;
   margin-bottom: 4%;
+
+  @media #{$phone}{
+    &{
+      margin-top:10%;
+    }
+  }
 }
 
 .projectName {
@@ -391,14 +401,14 @@ video {
     font-family: 'Oswald', sans-serif;
     z-index: 10;
     color: white;
-  }
-  @media #{$phone} {
-    p {
-      font-size: 6vw;
+  
+    @media #{$phone} {
+      & {
+        font-size: 6vw;
+      }
     }
   }
 }
-
 .wholeProject {
   a {
     display: flex;
@@ -407,7 +417,7 @@ video {
     margin-top: 8%;
   }
 
-  a:hover {
+  &:hover {
     text-decoration: none;
   }
   @media #{$phone} {
@@ -448,8 +458,14 @@ video {
 }
 /* Contact */
 
-#contact {
+#contactMenuScroll {
   margin-top: 4%;
+  
+  @media #{$phone}{
+    &{
+      margin-top:10%;
+    }
+  }
 }
 
 .contactF {
