@@ -73,9 +73,12 @@ window.onload = function() {
   // ENG / PL
   const projectsHeader = document.getElementsByClassName('projectsHeader');
   const wyslijWiad = document.getElementsByClassName('wyslijWiad');
-  const contact = document.getElementById('contactMenuScroll');
+  const contact = document.getElementById('contactMenuScroll').getElementsByClassName('col-md-12');
   const messageSend = document.getElementById('messageSend');
   const projectInRealization = document.getElementById('projectInRealization');
+  const subjectPlaceholder = document.getElementById('messageTopic');
+  const messagePlaceholder = document.getElementById('messageText');
+  const formAction = document.getElementById("ContactForm");
 
   $('#engButton').click(function() {
 
@@ -99,13 +102,13 @@ window.onload = function() {
         wyslijWiad[j].innerHTML = 'Visit website';
       }
 
-      contact.innerHTML = "<h1> Contact </h1><p class='text'> Would you like to cooperate with me? Maybe you're looking for a junior to you'r team? <br> Write to me, we'll be in touch. If you want to, check out my <a href='CV/cvENG.pdf'>CV.</a> See you later! </p>";
+      contact[0].innerHTML = "<h1> Contact </h1><p class='text'> Would you like to cooperate with me? Maybe you're looking for a junior to you'r team? <br> Write to me, we'll be in touch. If you want to, check out my <a href='CV/cvENG.pdf'>CV.</a> See you later! </p>";
 
 
       messageSend.innerHTML = 'Send message';
-      document.getElementById('messageTopic').setAttribute("placeholder", "Subject");
-      document.getElementById('messageText').setAttribute("placeholder", "Message");
-      document.getElementById("ContactForm").action = "php/contact.php";
+      subjectPlaceholder.setAttribute("placeholder", "Subject");
+      messagePlaceholder.setAttribute("placeholder", "Message");
+      formAction.action = "php/contact.php";
     });
   });
   $('#plButton').click(function() {
@@ -130,13 +133,13 @@ window.onload = function() {
         wyslijWiad[j].innerHTML = 'Odwiedź witrynę';
       }
 
-      contact.innerHTML = "<h1> Kontakt </h1><p class='text'> Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?' <br>Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href='CV/cvPL.pdf' target='_blank'>CV.</a> Do usłyszenia! </p>";
+      contact[0].innerHTML = "<h1> Kontakt </h1><p class='text'> Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?' <br>Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href='CV/cvPL.pdf' target='_blank'>CV.</a> Do usłyszenia! </p>";
 
 
       messageSend.innerHTML = 'Wyślij wiadomość';
-      document.getElementById('messageTopic').setAttribute("placeholder", "Temat");
-      document.getElementById('messageText').setAttribute("placeholder", "Treść wiadomości");
-      document.getElementById("ContactForm").action = "php/kontakt.php";
+      subjectPlaceholder.setAttribute("placeholder", "Temat");
+      messagePlaceholder.setAttribute("placeholder", "Treść wiadomości");
+      formAction.action = "php/kontakt.php";
     });
   });
 

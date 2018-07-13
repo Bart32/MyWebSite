@@ -257,19 +257,17 @@ video {
   margin-top: 50px;
 }
 /* Skills */
-#arrayOfSkillsImg{
-  padding-bottom:10%;
-}
 #skillsRow {
   margin-top: 4%;
   min-width:1px;
   min-height:50vw;
 
   img {
-    @include size(103px, 103px);
+    @include size(70%, 70%);
     margin-top: 25%;
     padding-bottom: 10%;
     cursor: pointer;
+    min-width:90px;
   }
   @media #{$phone} {
     img {
@@ -287,8 +285,8 @@ video {
   margin-bottom: 12%;
 
   img {
-    @include size(90px !important, 90px !important);
-    margin-left: 5% !important;
+    @include size(60% !important, 60% !important);
+    margin-left:5%;
   }
   @media #{$phone} {
     img {
@@ -301,15 +299,17 @@ video {
 .dotsContainer {
   display: flex;
   flex-direction: row;
-  min-width: 98px;
+  min-width:125px;
 }
 
 .dots {
   background-color: #c7ced6;
   position: relative;
-  @include size(15px, 15px);
+  @include size(9%, auto);
+  padding-top: 7%;
   border-radius: 50%;
-  margin: 0 0 0 5px;
+  margin-left: 4.5%;
+  min-width:px;
   @media #{$phone} {
     & {
       @include size(8%, auto);
@@ -343,7 +343,7 @@ video {
 
 #descriptionText {
   margin-top: 5%;
-  font-size: 3vmin;
+  font-size:calc(12px + 0.5vw);
   @media #{$phone} {
     & {
       font-size: 20px;
@@ -377,9 +377,12 @@ video {
 }
 
 .projectsHeader{
-  margin-top: 4%;
+
   margin-bottom: 4%;
 
+  h1{
+    margin-top: 4%;
+  }
   @media #{$phone}{
     &{
       margin-top:10%;
@@ -458,9 +461,10 @@ video {
 }
 /* Contact */
 
-#contactMenuScroll {
-  margin-top: 4%;
-  
+#contactMenuScroll{
+  h1{
+      margin-top: 4%;
+  }
   @media #{$phone}{
     &{
       margin-top:10%;
