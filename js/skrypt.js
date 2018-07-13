@@ -72,7 +72,8 @@ window.onload = function() {
 
   // ENG / PL
   const projectsHeader = document.getElementsByClassName('projectsHeader');
-  const wyslijWiad = document.getElementsByClassName('wyslijWiad');
+  const visitWebsite = document.getElementsByClassName('visitWebsite');
+  alert(visitWebsite)
   const contact = document.getElementById('contactMenuScroll').getElementsByClassName('col-md-12');
   const messageSend = document.getElementById('messageSend');
   const projectInRealization = document.getElementById('projectInRealization');
@@ -98,9 +99,6 @@ window.onload = function() {
 
       projectInRealization.innerHTML = "IN REALIZATION";
 
-      for (j = 0; j < wyslijWiad; j++) {
-        wyslijWiad[j].innerHTML = 'Visit website';
-      }
 
       contact[0].innerHTML = "<h1> Contact </h1><p class='text'> Would you like to cooperate with me? Maybe you're looking for a junior to you'r team? <br> Write to me, we'll be in touch. If you want to, check out my <a href='CV/cvENG.pdf'>CV.</a> See you later! </p>";
 
@@ -129,8 +127,8 @@ window.onload = function() {
 
       projectInRealization.innerHTML = "W realizacji";
 
-      for (j = 0; j < wyslijWiad; j++) {
-        wyslijWiad[j].innerHTML = 'Odwiedź witrynę';
+      for (j = 0; j < visitWebsite; j++) {
+        visitWebsite[j].innerHTML = 'Odwiedź witrynę';
       }
 
       contact[0].innerHTML = "<h1> Kontakt </h1><p class='text'> Jesteś zainteresowany współpracą? A może szukasz juniora do swojego teamu?' <br>Napisz do mnie, na pewno się odezwę! Jeśli masz ochotę, zerknij również na moje <a href='CV/cvPL.pdf' target='_blank'>CV.</a> Do usłyszenia! </p>";
